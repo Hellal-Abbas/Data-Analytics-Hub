@@ -57,7 +57,7 @@
             <Insets right="20.0" />
          </GridPane.margin>
       </TextField>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="LOGIN" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#loginHandler" prefHeight="25.0" prefWidth="63.0" text="LOGIN" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" />
