@@ -10,8 +10,8 @@ public class InsertRow {
 
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
-			String query = "INSERT INTO " + TABLE_NAME + String.format(" VALUES (%s, %s, %s, %s)", 
-					FirstName.toString(), LastName.toString(), Username.toString(), Password.toString());
+			String query = "INSERT INTO " + TABLE_NAME + String.format(" VALUES ('%s', '%s', '%s', '%s')", 
+					FirstName, LastName, Username, Password);
 
 			int result = stmt.executeUpdate(query);
 
@@ -25,6 +25,7 @@ public class InsertRow {
 		
 	}
 	
+
 	public static void InsertPost (Integer PostID, String Content, Integer Likes, Integer Shares, String DateTime) {
 		
 		final String TABLE_NAME = "SocialMediaPosts";

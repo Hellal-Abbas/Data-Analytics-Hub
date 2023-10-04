@@ -15,7 +15,8 @@ public class CreateTable {
 								+ "(Firstname VARCHAR(255) NOT NULL,"
 								+ "Lastname VARCHAR(255) NOT NULL,"
 								+ "Username VARCHAR(255) NOT NULL,"
-								+ "Password VARCHAR(255) NOT NULL)");
+								+ "Password VARCHAR(255) NOT NULL,"
+								+ "PRIMARY KEY (Username))");
 			
 			System.out.println("Table created succesfully!");
 			
