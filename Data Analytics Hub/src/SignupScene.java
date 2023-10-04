@@ -7,21 +7,19 @@ import javafx.scene.layout.GridPane;
 public class SignupScene {
 	
 	public String getTitle() {
+		
 		return "Data Analytics Hub Signup";
+		
 	}
 	
-	public Scene getScene() {
+	public Scene getScene() throws IOException {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Signup_GUI.fxml"));
 		
 		GridPane pane = null;
 		
-		try {
-			pane = loader.load();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
+		pane = loader.load();
+
 		Scene scene = new Scene(pane);
 		
 		return scene;

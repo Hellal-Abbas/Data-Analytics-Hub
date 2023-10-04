@@ -9,18 +9,14 @@ public class LoginScene {
 		return "Data Analytics Hub Login";
 	}
 	
-	public Scene getScene() {
+	public Scene getScene() throws IOException {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_GUI.fxml"));
 		
 		GridPane pane = null;
 		
-		try {
-			pane = loader.load();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
+		pane = loader.load();
+
 		Scene scene = new Scene(pane);
 		
 		return scene;
