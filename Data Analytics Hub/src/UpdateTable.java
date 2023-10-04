@@ -6,8 +6,6 @@ public class UpdateTable {
 	public static void main(String[] args) {
 		
 		final String TABLE_NAME = "Employee";
-
-
 		
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
