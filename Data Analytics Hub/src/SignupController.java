@@ -62,7 +62,10 @@ public class SignupController {
 		} else {missingPasswordOutput.setText("");}
 		
 
-		if ((firstname.trim().isEmpty() == false) && (lastname.trim().isEmpty() == false) && (username.trim().isEmpty() == false) && (password.trim().isEmpty() == false)) {
+		if ((firstname.trim().isEmpty() == false) 
+				&& (lastname.trim().isEmpty() == false) 
+				&& (username.trim().isEmpty() == false) 
+				&& (password.trim().isEmpty() == false)) {
 				
 			InsertRow.InsertUser(firstname, lastname, username, password);
 	        LoginScene login = new LoginScene();
@@ -72,9 +75,9 @@ public class SignupController {
 			stage.show();
 			
 			((Node)(event.getSource())).getScene().getWindow().hide();
-			
+	
 		}
-
+		
 	}
 
 }
