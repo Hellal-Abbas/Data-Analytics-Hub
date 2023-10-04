@@ -6,15 +6,16 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	@Override
-	public void start(Stage loginStage) throws IOException {
+	public void start(Stage WelcomeStage) throws IOException {
 		
-		LoginScene login = new LoginScene();
-		
-		loginStage.setTitle(login.getTitle());
-		loginStage.setScene(login.getScene());
-		loginStage.show();
+		WelcomeScene welcome = new WelcomeScene();
+		WelcomeStage.setTitle(welcome.getTitle());
+		WelcomeStage.setScene(welcome.getScene());
+		WelcomeStage.show();
 		
 	}
+
+
 
 	public static void main(String[] args) {
 		launch(args);
