@@ -66,6 +66,19 @@ public class SignupController {
 		} else {
 			missingPasswordOutput.setText("");
 		}
+		
+		if (CheckTableExist.CheckUsers() == true) {
+			
+			InsertRow.InsertUser(firstname, lastname, username, password);
+			
+		} else {
+			CreateTable.UsersTable();
+			InsertRow.InsertUser(firstname, lastname, username, password);
+
+			
+		}
+		
+		
 
 		
 	}
