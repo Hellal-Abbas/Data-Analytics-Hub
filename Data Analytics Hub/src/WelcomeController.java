@@ -9,7 +9,7 @@ public class WelcomeController {
 	@FXML
 	public void GoToSignUpHandler(ActionEvent event) {
 		
-        LoginScene signup = new LoginScene();
+        SignupScene signup = new SignupScene();
 		Stage stage = new Stage();
 		stage.setTitle(signup.getTitle());
 		stage.setScene(signup.getScene());
