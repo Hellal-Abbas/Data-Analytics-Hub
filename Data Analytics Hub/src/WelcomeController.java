@@ -3,15 +3,24 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
+import javafx.scene.Node;
 import javafx.stage.Stage;
 
 public class WelcomeController {
 	
 
 	@FXML
-	public void GoToSignUpHandler(ActionEvent e) {
+	public void GoToSignUpHandler(ActionEvent event) {
+		
+        LoginScene signup = new LoginScene();
+		Stage stage = new Stage();
+		stage.setTitle(signup.getTitle());
+		stage.setScene(signup.getScene());
+		stage.show();
+		
+		
+		// Hide this current window (if this is what you want)
+		((Node)(event.getSource())).getScene().getWindow().hide();
 		
 		
 	}
@@ -20,28 +29,16 @@ public class WelcomeController {
 	@FXML
 	public void GoToLoginHandler(ActionEvent event) {
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login_GUI.fxml"));
+        LoginScene login = new LoginScene();
+		Stage stage = new Stage();
+		stage.setTitle(login.getTitle());
+		stage.setScene(login.getScene());
+		stage.show();
 		
-			
-		GridPane pane = null;
 		
-		try {
-			pane = loader.load();
-			
-			LoginScene login = new LoginScene();
-			LoginScene.setTitle(login.getTitle());
-			LoginScene.setScene(login.getScene());
-			LoginScene.show();
-			
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		Scene scene = new Scene(pane);
-		
+		// Hide this current window (if this is what you want)
+		((Node)(event.getSource())).getScene().getWindow().hide();
 
-		
 	}
 	
 	

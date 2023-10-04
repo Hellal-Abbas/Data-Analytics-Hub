@@ -27,4 +27,14 @@ public class LoginScene {
 		
 	}
 
+	public static void setTitle(String title) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void setScene(Scene scene) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

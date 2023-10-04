@@ -5,7 +5,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
-	@Override
+
 	public void start(Stage WelcomeStage) throws IOException {
 		
 		WelcomeScene welcome = new WelcomeScene();
