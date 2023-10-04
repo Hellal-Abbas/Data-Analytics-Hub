@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -7,7 +9,7 @@ public class WelcomeController {
 	
 
 	@FXML
-	public void GoToSignUpHandler(ActionEvent event) {
+	public void GoToSignUpHandler(ActionEvent event) throws IOException {
 		
         SignupScene signup = new SignupScene();
 		Stage stage = new Stage();
@@ -24,7 +26,7 @@ public class WelcomeController {
 	
 	
 	@FXML
-	public void GoToLoginHandler(ActionEvent event) {
+	public void GoToLoginHandler(ActionEvent event) throws IOException {
 		
         LoginScene login = new LoginScene();
 		Stage stage = new Stage();
