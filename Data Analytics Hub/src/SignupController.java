@@ -33,7 +33,6 @@ public class SignupController {
 	private Label existingUserOutput;
 	
 	
-
 	@FXML
 	public void SignupHandler(ActionEvent e) {
 		
@@ -43,29 +42,29 @@ public class SignupController {
 		String password = passwordField.getText();
 		
 		if (firstname.trim().isEmpty()) {
-			missingFirstnameOutput.setText("Missing Firstname!");
+			missingFirstnameOutput.setText("Missing!");
 		} else {
 			missingFirstnameOutput.setText("");
 		}
 		
 		if (lastname.trim().isEmpty()) {
-			missingFirstnameOutput.setText("Missing Firstname!");
+			missingLastnameOutput.setText("Missing!");
 		} else {
-			missingFirstnameOutput.setText("");
+			missingLastnameOutput.setText("");
 		}
 		
 		
 		if (username.trim().isEmpty()) {
-			missingFirstnameOutput.setText("Missing Firstname!");
+			missingUsernameOutput.setText("Missing!");
 		} else {
-			missingFirstnameOutput.setText("");
+			missingUsernameOutput.setText("");
 		}
 		
 		
 		if (password.trim().isEmpty()) {
-			missingFirstnameOutput.setText("Missing Firstname!");
+			missingPasswordOutput.setText("Missing!");
 		} else {
-			missingFirstnameOutput.setText("");
+			missingPasswordOutput.setText("");
 		}
 
 		
