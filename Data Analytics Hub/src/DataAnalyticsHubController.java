@@ -9,21 +9,14 @@ import javafx.stage.WindowEvent;
 
 public class DataAnalyticsHubController {
 	
-	private String username;
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String newUsername) {
-		this.username = newUsername;
-	}
-	
 	@FXML
 	private Label welcomeOutput;
 	
-	public void showWelcome() {
-		welcomeOutput.setText("Hey");
+	@FXML
+	public void showDashBoard(ActionEvent event) throws IOException {
+		LoginController loginController = new LoginController();
+		welcomeOutput.setText("Welcome " + loginController.getUsername() + "!");
+		
 	}
 	
 
