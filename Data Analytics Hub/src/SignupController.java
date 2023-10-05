@@ -50,7 +50,6 @@ public class SignupController {
 		
 	}
 	
-	
 	@FXML
 	public void SignupHandler(ActionEvent event) throws IOException {
 		
