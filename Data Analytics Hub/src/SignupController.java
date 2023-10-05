@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Objects;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -61,37 +62,33 @@ public class SignupController {
 		if (password.trim().isEmpty()) {missingPasswordOutput.setText("Missing!");
 		} else {missingPasswordOutput.setText("");}
 		
+		String UsernameExists = DataExists.usernameExists(username);
 		
-		
-		
-		int idk = DataExists.UserExists(username);
-		
-		System.out.println(idk);
-		
-		
-//		if (DataExists.UserExists(username)) {
-//			
-//			existingUserOutput.setText("Username Taken!");
-//			
-//		} else if (DataExists.UserExists(username)) {	
-//			existingUserOutput.setText("");
-//				
-//
-//		} else if ((firstname.trim().isEmpty() == false) 
-//				&& (lastname.trim().isEmpty() == false) 
-//				&& (username.trim().isEmpty() == false) 
-//				&& (password.trim().isEmpty() == false)) {
-//			
-//			InsertRow.InsertUser(firstname, lastname, username, password);
-//	        LoginScene login = new LoginScene();
-//			Stage stage = new Stage();
-//			stage.setTitle(login.getTitle());
-//			stage.setScene(login.getScene());
-//			stage.show();
-//			
-//			((Node)(event.getSource())).getScene().getWindow().hide();
-//			
-//		}
+		if (Objects.equals(username, UsernameExists) == true) {
+			
+			existingUserOutput.setText("Username Taken!");
+			
+		} else if (Objects.equals(username, UsernameExists) == false) {	
+			
+			existingUserOutput.setText("");
+
+			if ((firstname.trim().isEmpty() == false) 
+					&& (lastname.trim().isEmpty() == false) 
+					&& (username.trim().isEmpty() == false) 
+					&& (password.trim().isEmpty() == false)) {
+				
+				InsertRow.InsertUser(firstname, lastname, username, password);
+		        LoginScene login = new LoginScene();
+				Stage stage = new Stage();
+				stage.setTitle(login.getTitle());
+				stage.setScene(login.getScene());
+				stage.show();
+				
+				((Node)(event.getSource())).getScene().getWindow().hide();
+				
+			}
+				
+		}
 		
 	}
 

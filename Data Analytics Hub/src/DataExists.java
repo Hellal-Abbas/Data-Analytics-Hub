@@ -1,13 +1,14 @@
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DataExists {
 	
-	public static int UserExists (String Username) {
+	public static String usernameExists (String Username) {
 		
 		final String TABLE_NAME = "Users";
-		int result = 1;
+		String result = null;
 
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
@@ -16,12 +17,37 @@ public class DataExists {
 			String query = "SELECT Username FROM " + TABLE_NAME + " WHERE Username = " +
 					String.format("'%s'", Username);
 
-			int result = stmt.executeUpdate(query);
+			try (ResultSet resultSet = stmt.executeQuery(query)) {
+				while(resultSet.next()) {
+					result = resultSet.getString("Username");
+				}
+			} 
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		return result;
+		
+	}
+	
+	
+	public static String passwordExists (String Username, String Password) {
+		
+		final String TABLE_NAME = "Users";
+		String result = null;
 
-			if (result == 1) {
-				System.out.println("Insert into table " + TABLE_NAME + " executed successfully");
-				System.out.println(result + " row(s) affected");
-			}
+		try (Connection con = DatabaseConnection.getConnection();
+				Statement stmt = con.createStatement();) {
+			
+			
+			String query = "SELECT * FROM " + TABLE_NAME + " WHERE Username = " +
+					String.format("'%s' and Password = '%s'", Username, Password);
+
+			try (ResultSet resultSet = stmt.executeQuery(query)) {
+				while(resultSet.next()) {
+					result = resultSet.getString("Password");
+				}
+			} 
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
