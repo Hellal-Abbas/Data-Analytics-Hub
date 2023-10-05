@@ -2,6 +2,7 @@ import java.util.Objects;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class LoginController {
@@ -11,6 +12,12 @@ public class LoginController {
 	
 	@FXML
 	private TextField passwordField;
+	
+	@FXML
+	private Label incorrectUsernameOutput;
+	
+	@FXML
+	private Label incorrectPasswordOutput;
 
 	@FXML
 	public void loginHandler(ActionEvent e) {
@@ -21,19 +28,20 @@ public class LoginController {
 		String usernameExists = DataExists.usernameExists(username);
 		String passwordExists = DataExists.passwordExists(username, password);
 		
-		System.out.println(usernameExists);
-		System.out.println(passwordExists);
+		if ((Objects.equals(username, usernameExists) == false) 
+		 || (Objects.equals(password, passwordExists) == false)) {
+			incorrectUsernameOutput.setText("Incorrect username");
+			incorrectPasswordOutput.setText("or password!");
 
-
-//		
-//		if ((Objects.equals(username, usernameExists) == true) && (Objects.equals(username, passwordExists) == true)) {
-//			System.out.println("yep");
-//		} else {
-//			
-//			System.out.println("nope");
-//
-//		}
-
+			
+		} else if ((Objects.equals(username, usernameExists) == true) 
+				&& (Objects.equals(password, passwordExists) == true)) {
+			incorrectUsernameOutput.setText("");
+			incorrectPasswordOutput.setText("");
+			
+			
+			
+		}
 		
 		
 	}
