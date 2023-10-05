@@ -21,15 +21,12 @@ public class DataAnalyticsHubController {
 	@FXML
 	private Label welcomeOutput;
 	
+	public void showWelcome() {
+		welcomeOutput.setText("Hey");
+	}
+	
+    
 
-	EventHandler<javafx.stage.WindowEvent> eventHandler = new EventHandler<javafx.stage.WindowEvent>() { 
-		
-		@Override
-		public void handle(WindowEvent e) {
-			welcomeOutput.setText("Welcome");
-			System.out.println("Hey");
-	    } 
-    };  
 
 
 }

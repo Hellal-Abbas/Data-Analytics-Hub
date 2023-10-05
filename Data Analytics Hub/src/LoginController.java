@@ -42,15 +42,19 @@ public class LoginController {
 			incorrectUsernameOutput.setText("");
 			incorrectPasswordOutput.setText("");
 			
+			DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
+			dataAnalyticsHubController.setUsername(username);
+			
 			DataAnalyticsHubScene dataAnalyticsHub = new DataAnalyticsHubScene();
 			Stage stage = new Stage();
 			stage.setTitle(dataAnalyticsHub.getTitle());
 			stage.setScene(dataAnalyticsHub.getScene());
+			stage.setOnShown(WindowEvent -> {
+				System.out.println("hello");
+//				dataAnalyticsHubController.showWelcome();
+			});
 			stage.show();
 			
-			DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
-			dataAnalyticsHubController.setUsername(username);
-
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
 		}
