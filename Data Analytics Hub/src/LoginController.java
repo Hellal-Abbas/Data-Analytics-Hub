@@ -2,11 +2,13 @@ import java.io.IOException;
 import java.util.Objects;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class LoginController {
 	
@@ -49,11 +51,14 @@ public class LoginController {
 			Stage stage = new Stage();
 			stage.setTitle(dataAnalyticsHub.getTitle());
 			stage.setScene(dataAnalyticsHub.getScene());
-			stage.setOnShown(WindowEvent -> {
-				System.out.println("hello");
-//				dataAnalyticsHubController.showWelcome();
-			});
 			stage.show();
+			
+			final EventHandler<WindowEvent> shownHandler = new EventHandler<WindowEvent>() {
+				  @Override
+				  public void handle(WindowEvent event) {
+				    System.out.println("Shown");
+				  }
+				};
 			
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
