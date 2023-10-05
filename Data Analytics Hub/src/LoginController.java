@@ -48,15 +48,12 @@ public class LoginController {
 			stage.setScene(dataAnalyticsHub.getScene());
 			stage.show();
 			
+			DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
+			dataAnalyticsHubController.setUsername(username);
+
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
-			
-			
-			
-			
-			
 		}
-		
 		
 	}
 	
