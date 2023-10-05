@@ -32,6 +32,19 @@ public class LoginController {
 	
 	@FXML
 	private Label incorrectPasswordOutput;
+	
+	@FXML
+	public void goBackHandler(ActionEvent event) throws IOException {
+		
+		WelcomeScene welcomeScene = new WelcomeScene();
+		Stage stage = new Stage();
+		stage.setTitle(welcomeScene.getTitle());
+		stage.setScene(welcomeScene.getScene());
+		stage.show();
+		
+		((Node)(event.getSource())).getScene().getWindow().hide();
+		
+	}
 
 	@FXML
 	public void loginHandler(ActionEvent event) throws IOException {

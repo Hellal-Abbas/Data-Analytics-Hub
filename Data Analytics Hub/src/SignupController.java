@@ -37,6 +37,19 @@ public class SignupController {
 	@FXML
 	private Label existingUserOutput;
 	
+	@FXML
+	public void goBackHandler(ActionEvent event) throws IOException {
+		
+		WelcomeScene welcomeScene = new WelcomeScene();
+		Stage stage = new Stage();
+		stage.setTitle(welcomeScene.getTitle());
+		stage.setScene(welcomeScene.getScene());
+		stage.show();
+		
+		((Node)(event.getSource())).getScene().getWindow().hide();
+		
+	}
+	
 	
 	@FXML
 	public void SignupHandler(ActionEvent event) throws IOException {
