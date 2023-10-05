@@ -1,9 +1,12 @@
+import java.io.IOException;
 import java.util.Objects;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class LoginController {
 	
@@ -20,7 +23,7 @@ public class LoginController {
 	private Label incorrectPasswordOutput;
 
 	@FXML
-	public void loginHandler(ActionEvent e) {
+	public void loginHandler(ActionEvent event) throws IOException {
 		
 		String username = usernameField.getText();
 		String password = passwordField.getText();
@@ -38,6 +41,17 @@ public class LoginController {
 				&& (Objects.equals(password, passwordExists) == true)) {
 			incorrectUsernameOutput.setText("");
 			incorrectPasswordOutput.setText("");
+			
+			DataAnalyticsHubScene dataAnalyticsHub = new DataAnalyticsHubScene();
+			Stage stage = new Stage();
+			stage.setTitle(dataAnalyticsHub.getTitle());
+			stage.setScene(dataAnalyticsHub.getScene());
+			stage.show();
+			
+			((Node)(event.getSource())).getScene().getWindow().hide();
+			
+			
+			
 			
 			
 			
