@@ -3,6 +3,7 @@ import java.util.Objects;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -52,14 +53,14 @@ public class LoginController {
 			incorrectUsernameOutput.setText("");
 			incorrectPasswordOutput.setText("");
 			
-		
+			DataSingleton dataSingleton = DataSingleton.getInstance();
+			dataSingleton.setUsername(username);
+			
 			DataAnalyticsHubScene dataAnalyticsHub = new DataAnalyticsHubScene();
 			Stage stage = new Stage();
 			stage.setTitle(dataAnalyticsHub.getTitle());
 			stage.setScene(dataAnalyticsHub.getScene());
 			stage.show();
-			
-			setUsername(username);
 			
 			((Node)(event.getSource())).getScene().getWindow().hide();
 			
