@@ -22,7 +22,7 @@ public class DataAnalyticsHubController implements Initializable {
 	}
 	
 	@FXML
-	public void showDashBoard(ActionEvent event) throws IOException {		
+	public void showDashBoardHandler(ActionEvent event) throws IOException {		
 		welcomeOutput.setText("Welcome " + username + "!");
 	}
 	
