@@ -42,6 +42,12 @@ public class DataAnalyticsHubController implements Initializable {
 	@FXML
 	public void showDashBoardHandler(ActionEvent event) throws IOException {		
 		
+		DashboardScene dashboardScene = new DashboardScene();
+		DataAnalyticsHubScene dataAnalyticsHubScene = new DataAnalyticsHubScene();
+		
+		dataAnalyticsHubScene.
+		
+		borderpane.setCenter();
 		
 	}
 	
