@@ -6,10 +6,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class DataAnalyticsHubController implements Initializable {
+	
+	@FXML
+	private BorderPane DataAnalyticsHubScene;
 	
 	private String firstname;
 	
@@ -27,32 +32,36 @@ public class DataAnalyticsHubController implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle resourcebundle) {
 		
-		username = dataSingleton.getUsername();
-		
-		firstname = userDetails.getUserDetails(username, "firstname");
-		lastname = userDetails.getUserDetails(username, "lastname");
-		password = userDetails.getUserDetails(username, "password");
-
-		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
-		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);
-
-		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
+//		username = dataSingleton.getUsername();
+//		
+//		firstname = userDetails.getUserDetails(username, "firstname");
+//		lastname = userDetails.getUserDetails(username, "lastname");
+//		password = userDetails.getUserDetails(username, "password");
+//
+//		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
+//		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);
+//
+//		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
 	}
 	
 	@FXML
 	public void showDashBoardHandler(ActionEvent event) throws IOException {		
 		
-		DashboardScene dashboardScene = new DashboardScene();
-		DataAnalyticsHubScene dataAnalyticsHubScene = new DataAnalyticsHubScene();
+//		DashboardScene dashboardScene = new DashboardScene();
+//		DataAnalyticsHubScene dataAnalyticsHubScene = new DataAnalyticsHubScene();
+//		
+//		
+//		borderpane.setCenter(dashboardScene.getScene());
+//		stage.setScene(dataAnalyticsHubScene.getScene());
 		
-		dataAnalyticsHubScene.
 		
-		borderpane.setCenter();
+//		dataAnalyticsHubScene.setCenter();
 		
 	}
 	
 	@FXML
-	public void accountHandler(ActionEvent event) throws IOException {		
+	public void accountHandler(ActionEvent event) throws IOException {
+		
 	}
 	
 	@FXML
@@ -65,8 +74,7 @@ public class DataAnalyticsHubController implements Initializable {
 		stage.show();
 		
 		((Node)(event.getSource())).getScene().getWindow().hide();
-		
-		
+			
 	}
 	
 }
