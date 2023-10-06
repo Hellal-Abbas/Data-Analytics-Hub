@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="DataAnalyticsHubScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DataAnalyticsHubController">
    <top>
       <GridPane prefHeight="89.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -36,7 +36,7 @@
             <ButtonBar prefHeight="45.0" prefWidth="582.0">
                <buttons>
                   <Line endX="113.23223114013672" rotate="90.0" startX="68.0" translateX="70.0" />
-                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="312.0">
+                  <Label fx:id="welcomeOutput" alignment="CENTER" prefHeight="45.0" prefWidth="333.0">
                      <font>
                         <Font name="Calibri Bold" size="18.0" />
                      </font>

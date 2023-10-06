@@ -9,15 +9,13 @@ public class DashboardScene {
 	
 	public AnchorPane getScene() throws IOException {
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Data_Analytics_Hub_GUI.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard_GUI.fxml"));
 		
-		AnchorPane pane = null;
+		AnchorPane anchorpane = null;
 		
-		pane = loader.load();
-
-//		Scene scene = new Scene(pane);
+		anchorpane = loader.load();
 		
-		return pane;
+		return anchorpane;
 		
 	}
 

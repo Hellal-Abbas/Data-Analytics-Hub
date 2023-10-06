@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 public class DataAnalyticsHubController implements Initializable {
 	
 	@FXML
-	private BorderPane DataAnalyticsHubScene;
+	private BorderPane borderpane;
 	
 	private String firstname;
 	
@@ -32,35 +32,32 @@ public class DataAnalyticsHubController implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle resourcebundle) {
 		
-//		username = dataSingleton.getUsername();
-//		
-//		firstname = userDetails.getUserDetails(username, "firstname");
-//		lastname = userDetails.getUserDetails(username, "lastname");
-//		password = userDetails.getUserDetails(username, "password");
-//
-//		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
-//		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);
-//
-//		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
+		username = dataSingleton.getUsername();
+		
+		firstname = userDetails.getUserDetails(username, "firstname");
+		lastname = userDetails.getUserDetails(username, "lastname");
+		password = userDetails.getUserDetails(username, "password");
+
+		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
+		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);
+
+		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
 	}
 	
 	@FXML
 	public void showDashBoardHandler(ActionEvent event) throws IOException {		
 		
-//		DashboardScene dashboardScene = new DashboardScene();
-//		DataAnalyticsHubScene dataAnalyticsHubScene = new DataAnalyticsHubScene();
-//		
-//		
-//		borderpane.setCenter(dashboardScene.getScene());
-//		stage.setScene(dataAnalyticsHubScene.getScene());
-		
-		
-//		dataAnalyticsHubScene.setCenter();
-		
+		DashboardScene dashboardScene = new DashboardScene();
+		borderpane.setCenter(dashboardScene.getScene());
+
 	}
 	
 	@FXML
 	public void accountHandler(ActionEvent event) throws IOException {
+		
+		AccountScene accountScene = new AccountScene();
+		borderpane.setCenter(accountScene.getScene());
+		
 		
 	}
 	
