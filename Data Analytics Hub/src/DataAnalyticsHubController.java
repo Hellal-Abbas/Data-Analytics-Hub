@@ -5,7 +5,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class DataAnalyticsHubController implements Initializable {
 	
@@ -39,6 +41,8 @@ public class DataAnalyticsHubController implements Initializable {
 	
 	@FXML
 	public void showDashBoardHandler(ActionEvent event) throws IOException {		
+		
+		
 	}
 	
 	@FXML
@@ -46,7 +50,17 @@ public class DataAnalyticsHubController implements Initializable {
 	}
 	
 	@FXML
-	public void logoutHandler(ActionEvent event) throws IOException {		
+	public void logoutHandler(ActionEvent event) throws IOException {	
+		
+        LoginScene login = new LoginScene();
+		Stage stage = new Stage();
+		stage.setTitle(login.getTitle());
+		stage.setScene(login.getScene());
+		stage.show();
+		
+		((Node)(event.getSource())).getScene().getWindow().hide();
+		
+		
 	}
 	
 }
