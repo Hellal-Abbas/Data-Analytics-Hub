@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane prefHeight="228.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+<GridPane prefHeight="228.0" prefWidth="304.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="109.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="175.0" />
