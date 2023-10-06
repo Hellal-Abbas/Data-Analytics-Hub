@@ -2,6 +2,7 @@ import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
 public class DataAnalyticsHubScene {
@@ -14,11 +15,11 @@ public class DataAnalyticsHubScene {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Data_Analytics_Hub_GUI.fxml"));
 		
-		Pane pane = null;
+		BorderPane borderpane = null;
 		
-		pane = loader.load();
+		borderpane = loader.load();
 
-		Scene scene = new Scene(pane);
+		Scene scene = new Scene(borderpane);
 		
 		return scene;
 		
