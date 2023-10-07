@@ -21,8 +21,6 @@ public class DataAnalyticsHubController implements Initializable {
 	private String lastname;
 	
 	private String username;
-	
-	private String password;
 
 	DataSingleton dataSingleton = DataSingleton.getInstance();
 	
@@ -36,7 +34,6 @@ public class DataAnalyticsHubController implements Initializable {
 		
 		firstname = userDetails.getUserDetails(username, "firstname");
 		lastname = userDetails.getUserDetails(username, "lastname");
-		password = userDetails.getUserDetails(username, "password");
 
 		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
 		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);

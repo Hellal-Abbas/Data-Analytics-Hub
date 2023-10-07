@@ -20,7 +20,8 @@ public class AccountController {
 	@FXML
 	public void EditDetailsHandler(ActionEvent event) throws IOException {		
 		
-
+		EditDetailsScene editDetailsScene = new EditDetailsScene();
+		borderpane.setCenter(editDetailsScene.getScene());
 
 	}
 
