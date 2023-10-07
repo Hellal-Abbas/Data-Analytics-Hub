@@ -15,7 +15,6 @@ public class AccountController {
 		AccountDetailsScene accountDetailsScene = new AccountDetailsScene();
 		borderpane.setCenter(accountDetailsScene.getScene());
 		
-
 	}
 	
 	@FXML
