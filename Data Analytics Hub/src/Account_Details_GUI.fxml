@@ -12,22 +12,22 @@
             <Font name="Calibri Bold" size="30.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="70.0" prefHeight="30.0" prefWidth="100.0" text="Firstname:">
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="73.0" prefHeight="30.0" prefWidth="100.0" text="Firstname:">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="103.0" prefHeight="30.0" prefWidth="100.0" text="Lastname:">
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="106.0" prefHeight="30.0" prefWidth="100.0" text="Lastname:">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="137.0" prefHeight="30.0" prefWidth="100.0" text="Username:">
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="140.0" prefHeight="30.0" prefWidth="100.0" text="Username:">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="175.0" prefHeight="30.0" prefWidth="100.0" text="Password:">
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="172.0" prefHeight="30.0" prefWidth="100.0" text="Password:">
          <font>
             <Font size="17.0" />
          </font>
@@ -52,12 +52,12 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <Line endX="120.0" layoutX="125.0" layoutY="100.0" startX="-70.0" />
-      <Line endX="120.0" layoutX="125.0" layoutY="135.0" startX="-70.0" />
-      <Line endX="120.0" layoutX="125.0" layoutY="170.0" startX="-70.0" />
-      <Line endX="120.0" layoutX="125.0" layoutY="205.0" startX="-70.0" />
-      <Line endX="80.0" layoutX="41.0" layoutY="138.0" rotate="90.0" startX="-53.0" />
+      <Line endX="120.0" layoutX="125.0" layoutY="105.0" startX="-70.0" />
+      <Line endX="120.0" layoutX="125.0" layoutY="138.0" startX="-70.0" />
+      <Line endX="120.0" layoutX="125.0" layoutY="171.0" startX="-70.0" />
+      <Line endX="120.0" layoutX="125.0" layoutY="204.0" startX="-70.0" />
+      <Line endX="80.0" layoutX="40.0" layoutY="137.0" rotate="90.0" startX="-51.0" />
       <Line endX="120.0" layoutX="125.0" layoutY="72.0" startX="-70.0" />
-      <Line endX="80.0" layoutX="232.0" layoutY="138.0" rotate="90.0" startX="-53.0" />
+      <Line endX="80.0" layoutX="231.0" layoutY="138.0" rotate="90.0" startX="-52.0" />
    </children>
 </AnchorPane>

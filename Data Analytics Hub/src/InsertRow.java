@@ -41,6 +41,7 @@ public class InsertRow {
 				System.out.println("Insert into table " + TABLE_NAME + " executed successfully");
 				System.out.println(result + " row(s) affected");
 			}
+			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}

@@ -24,8 +24,11 @@ public class DataAnalyticsHubController implements Initializable {
 
 	DataSingleton dataSingleton = DataSingleton.getInstance();
 	
-	@FXML
-	private Label welcomeOutput;
+	@FXML Label welcomeOutput;
+	
+    public void setWelcomeName(String firstname, String lastname) {
+		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
+    }
 	
 	@Override
 	public void initialize(URL url, ResourceBundle resourcebundle) {

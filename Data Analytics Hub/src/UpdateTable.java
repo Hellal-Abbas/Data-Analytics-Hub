@@ -3,23 +3,41 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class UpdateTable {
-	public static void main(String[] args) {
+	
+	public static int UpdateUserDetails(String column, String newvalue, String username) {
 		
-		final String TABLE_NAME = "Employee";
+		final String TABLE_NAME = "Users";
+		int result = 0;
 		
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
-			String sql = "UPDATE " + TABLE_NAME +
-					" SET salary = 1.2 * salary";
+			String sql = "UPDATE " 
+				+ TABLE_NAME 
+				+ " SET " 
+				+ column 
+				+ " = " 
+				+ String.format("'%s'", newvalue) 
+				+ " WHERE username = " 
+				+ String.format("'%s'", username);
 
-			int result = stmt.executeUpdate(sql);
-
+			
+			result = stmt.executeUpdate(sql);
+			
 			if (result == 1) {
-				System.out.println("Update table " + TABLE_NAME + " executed successfully");
+				System.out.println("Value updated successfully");
 				System.out.println(result + " row(s) affected");
+			} else {
+				System.out.println(result);
 			}
+
 		} catch (SQLException e) {
+			
 			System.out.println(e.getMessage());
+			
 		}
+		
+		return result;	
 	}
 }
+
+
