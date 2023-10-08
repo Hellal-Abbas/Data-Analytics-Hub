@@ -44,31 +44,58 @@ public class EditDetailsController {
 		
 		String firstname = firstnameField.getText();
 		String lastname = lastnameField.getText();
-//		String username = usernameField.getText();
+		String AccountUsername = usernameField.getText();
 		String password = passwordField.getText();
 		
 		if ((Objects.equals(firstname, "") == true)) {
 			firstnameOutput.setText("");
-			
 		} else if ((Objects.equals(firstname, "") == false)) {
-			
 			UpdateTable.UpdateUserDetails("firstname", firstname, username);
-			
 			firstnameOutput.setText("Updated!");
-			
-			DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
-			dataAnalyticsHubController.setWelcomeName(firstname, lastname);
+		}
+		
+		if ((Objects.equals(lastname, "") == true)) {
+			lastnameOutput.setText("");
+		} else if ((Objects.equals(lastname, "") == false)) {
+			UpdateTable.UpdateUserDetails("lastname", lastname, username);
+			lastnameOutput.setText("Updated!");
 		}
 		
 		
 		
+		if ((Objects.equals(username, "") == true)) {
+			usernameOutput.setText("");
+			
+		} else if (Objects.equals(username, "") == false) {
+			
+			String UsernameExists = DataExists.usernameExists(username);
+			System.out.println(UsernameExists);
+			
+			if (Objects.equals(AccountUsername, UsernameExists) == true) {
+				
+				usernameOutput.setText("Username Taken!");
+			
+			} else if ((Objects.equals(AccountUsername, UsernameExists) == false) 
+					&& (AccountUsername != "")) {
+				
+				UpdateTable.UpdateUserDetails("username", AccountUsername, username);
+				usernameOutput.setText("Updated!");
+			}
+		} else if ((Objects.equals(username, "") == true)) {
+			usernameOutput.setText("");
+		}
+		
+				
 
-//		lastnameOutput.setText(lastname);
-//		usernameOutput.setText(username);
-//		passwordOutput.setText(password);
-
-
+		
+		
+		if ((Objects.equals(password, "") == true)) {
+			passwordOutput.setText("");
+		} else if ((Objects.equals(password, "") == false)) {
+			UpdateTable.UpdateUserDetails("password", password, username);
+			passwordOutput.setText("Updated!");
+		}
+		
 	}
-
 
 }

@@ -57,8 +57,6 @@ public class DataAnalyticsHubController implements Initializable {
 		
 		AccountScene accountScene = new AccountScene();
 		borderpane.setCenter(accountScene.getScene());
-		
-		
 	}
 	
 	@FXML
