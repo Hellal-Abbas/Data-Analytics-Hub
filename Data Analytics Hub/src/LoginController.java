@@ -49,6 +49,10 @@ public class LoginController {
 	@FXML
 	public void loginHandler(ActionEvent event) throws IOException {
 		
+		if (CheckTableExist.CheckUsers() == false) {
+			CreateTable.UsersTable();
+		}
+		
 		String username = usernameField.getText();
 		String password = passwordField.getText();
 		
