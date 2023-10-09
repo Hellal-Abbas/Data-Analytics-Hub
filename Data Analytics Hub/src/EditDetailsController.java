@@ -47,55 +47,37 @@ public class EditDetailsController {
 		String AccountUsername = usernameField.getText();
 		String password = passwordField.getText();
 		
-		if ((Objects.equals(firstname, "") == true)) {
-			firstnameOutput.setText("");
-		} else if ((Objects.equals(firstname, "") == false)) {
+		String UsernameExists = DataExists.usernameExists(AccountUsername);
+		
+		if (Objects.equals(firstname, "") == true) {firstnameOutput.setText("");} 
+		else if ((Objects.equals(firstname, "") == false)) {
 			UpdateTable.UpdateUserDetails("firstname", firstname, username);
-			firstnameOutput.setText("Updated!");
-		}
+			firstnameOutput.setText("Updated!");}
 		
-		if ((Objects.equals(lastname, "") == true)) {
-			lastnameOutput.setText("");
-		} else if ((Objects.equals(lastname, "") == false)) {
+		if (Objects.equals(lastname, "") == true) {lastnameOutput.setText("");} 
+		else if ((Objects.equals(lastname, "") == false)) {
 			UpdateTable.UpdateUserDetails("lastname", lastname, username);
-			lastnameOutput.setText("Updated!");
-		}
+			lastnameOutput.setText("Updated!");	}
 		
-		
-		
-		if ((Objects.equals(username, "") == true)) {
-			usernameOutput.setText("");
+		if (Objects.equals(AccountUsername, "") == true) {usernameOutput.setText("");}
+		else if (Objects.equals(AccountUsername, "") == false) {
 			
-		} else if (Objects.equals(username, "") == false) {
-			
-			String UsernameExists = DataExists.usernameExists(username);
-			System.out.println(UsernameExists);
-			
-			if (Objects.equals(AccountUsername, UsernameExists) == true) {
-				
+			if ((Objects.equals(AccountUsername, UsernameExists) == true) 
+					|| (Objects.equals(UsernameExists, null) == false)) {
 				usernameOutput.setText("Username Taken!");
 			
-			} else if ((Objects.equals(AccountUsername, UsernameExists) == false) 
+			} else if ((Objects.equals(UsernameExists, null) == true) 
 					&& (AccountUsername != "")) {
-				
 				UpdateTable.UpdateUserDetails("username", AccountUsername, username);
 				usernameOutput.setText("Updated!");
+				dataSingleton.setUsername(AccountUsername);
 			}
-		} else if ((Objects.equals(username, "") == true)) {
-			usernameOutput.setText("");
-		}
+		} 
 		
-				
-
-		
-		
-		if ((Objects.equals(password, "") == true)) {
-			passwordOutput.setText("");
-		} else if ((Objects.equals(password, "") == false)) {
+		if (Objects.equals(password, "") == true) {passwordOutput.setText("");} 
+		else if (Objects.equals(password, "") == false) {
 			UpdateTable.UpdateUserDetails("password", password, username);
-			passwordOutput.setText("Updated!");
-		}
-		
+			passwordOutput.setText("Updated!");	}
 	}
 
 }

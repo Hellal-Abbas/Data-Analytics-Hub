@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Objects;
 
 public class DataExists {
 	
@@ -9,6 +10,7 @@ public class DataExists {
 		
 		final String TABLE_NAME = "Users";
 		String result = null;
+		String usernameResult = null;
 
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
@@ -19,15 +21,19 @@ public class DataExists {
 
 			try (ResultSet resultSet = stmt.executeQuery(query)) {
 				while(resultSet.next()) {
-					result = resultSet.getString("Username");
+					usernameResult = resultSet.getString("Username");
+					
+					if (Objects.equals(Username, usernameResult) == true) {
+						result = usernameResult;	
+					} else {
+						result = null;
+					}
 				}
 			} 
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		
 		return result;
-		
 	}
 	
 	
