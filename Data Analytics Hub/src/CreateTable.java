@@ -37,6 +37,7 @@ public class CreateTable {
 			stmt.executeUpdate("CREATE TABLE IF NOT EXISTS " + TABLE_NAME 
 								+ "(postID INT NOT NULL,"
 								+ "Content VARCHAR(255) NOT NULL,"
+								+ "Author VARCHAR(255) NOT NULL,"
 								+ "Likes INT NOT NULL,"
 								+ "Shares INT NOT NULL,"
 								+ "DateTime VARCHAR(255) NOT NULL,"

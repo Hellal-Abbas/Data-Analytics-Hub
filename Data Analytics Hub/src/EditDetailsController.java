@@ -68,6 +68,7 @@ public class EditDetailsController {
 			} else if ((Objects.equals(UsernameExists, null) == true) 
 					&& (AccountUsername != "")) {
 				UpdateTable.UpdateUserDetails("username", AccountUsername, username);
+				UpdateTable.UpdatePostsUsername("username", AccountUsername, username);
 				usernameOutput.setText("Updated!");
 				dataSingleton.setUsername(AccountUsername);
 			}

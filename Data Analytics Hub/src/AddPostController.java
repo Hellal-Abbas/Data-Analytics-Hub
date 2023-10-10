@@ -59,69 +59,82 @@ public class AddPostController {
 		
 		if (CheckTableExist.CheckSocialMediaPosts() == false) {CreateTable.SocialMediaPostsTable();}
 		
-		String postidfield = postidField.getText();
-		String contentfield = contentField.getText();
-		String authorfield = authorField.getText();
-		String likesfield = likesField.getText();
-		String sharesfield = sharesField.getText();
-		String datetimefield = datetimeField.getText();
+		String postidfield = postidField.getText(); String contentfield = contentField.getText();
+		String authorfield = authorField.getText(); String likesfield = likesField.getText();
+		String sharesfield = sharesField.getText(); String datetimefield = datetimeField.getText();
 		
-		System.out.println(postidfield.trim().isEmpty());
+		int postid = 0; String content = null; String author = null; 
+		int likes = 0; int shares = 0; String datetime = null;
+		
+		boolean postidValidity = false; boolean contentValidity = false; boolean authorValidity = false;
+		boolean likesValidity = false; boolean sharesValidity = false; boolean datetimeValidity = false;
 		
 		if (postidfield.trim().isEmpty()) {postidOutput.setText("Missing!");} 
-		else if (postidfield.trim().isEmpty() == false) {
-			
+		else {
 			try {
+			    postid  = Integer.valueOf(postidfield);
+			    String postidExists = DataExists.postidExists(postidfield);
 				
-	            int postid  = Integer.valueOf(postidfield);
-	            
 	            if (postid < 0) {postidOutput.setText("Must be greater than 0!");}
-				
-			} catch (NumberFormatException e) {
-				postidOutput.setText("Must be a number!");
-			}
-			
-
-			
+	            else if (Objects.equals(postidfield, postidExists) == true) {postidOutput.setText("PostID Taken!");}
+	            else {
+	            	postidOutput.setText("");
+	            	postidValidity = true;
+	            }				
+			} catch (NumberFormatException e) {postidOutput.setText("Must be a number!");}
 		}
 		
-
+		if (contentfield.trim().isEmpty()) {contentOutput.setText("Missing!");} 
+		else {
+			contentOutput.setText("");
+			content = contentfield;
+			contentValidity = true;}
+		
+		if (authorfield.trim().isEmpty()) {authorOutput.setText("Missing!");} 
+		else {
+			authorOutput.setText("");
+			author = authorfield;
+			authorValidity = true;}
+		
+		if (likesfield.trim().isEmpty()) {likesOutput.setText("Missing!");} 
+		else {
+			try {
+				likes  = Integer.valueOf(likesfield);
+	            if (likes < 0) {likesOutput.setText("Must be greater than 0!");}             
+	            else {
+	            	likesOutput.setText("");
+	            	likesValidity = true;
+	            }
+			} catch (NumberFormatException e) {likesOutput.setText("Must be a number!");}
+		}
+		
+		if (sharesfield.trim().isEmpty()) {sharesOutput.setText("Missing!");} 
+		else {
+			try {
+				shares  = Integer.valueOf(sharesfield);
+	            if (shares < 0) {sharesOutput.setText("Must be greater than 0!");}	            
+	            else {
+	            	sharesOutput.setText("");
+	            	sharesValidity = true;
+	            }
+				
+			} catch (NumberFormatException e) {sharesOutput.setText("Must be a number!");}
+		}
+		
+		if (datetimefield.trim().isEmpty()) {datetimeOutput.setText("Missing!");} 
+		else {
+			if (DateTimeCheck.CheckValidity(datetimefield) == false) {datetimeOutput.setText("Incorrect Format!");}
+			else if (DateTimeCheck.CheckValidity(datetimefield) == true) {
+				datetimeOutput.setText("");
+				datetime = datetimefield;
+				datetimeValidity = true;}
+			}
 			
-
-
-		
-		if (contentfield.trim().isEmpty()) {contentOutput.setText("Missing!");} else {contentOutput.setText("");}
-		
-		if (authorfield.trim().isEmpty()) {authorOutput.setText("Missing!");} else {authorOutput.setText("");}
-		
-		if (likesfield.trim().isEmpty()) {likesOutput.setText("Missing!");} else {likesOutput.setText("");}
-		
-		if (sharesfield.trim().isEmpty()) {sharesOutput.setText("Missing!");} else {sharesOutput.setText("");}
-		
-		if (datetimefield.trim().isEmpty()) {datetimeOutput.setText("Missing!");} else {datetimeOutput.setText("");}
-		
-//		InsertRow.InsertPost(postid, content, author, likes, shares, datetime, username);
-		
+		if ((postidValidity)&&(contentValidity)&&(authorValidity)&&(likesValidity)&&(sharesValidity)&&(datetimeValidity)) {
+			InsertRow.InsertPost(postid, content, author, likes, shares, datetime, username);
+			postaddedOutput.setText("Post Added!");
+		}		
 	}
-
 }
 
-//class Main {
-//
-//    public static void main(String[] args) {
-//        String validString = "123";
-//        String invalidString = "123x";
-//        Integer number;
-//
-//        try {
-//            number = Integer.valueOf(validString);
-//            System.out.println("Converted integer: " + number);
-//
-//            number = Integer.valueOf(invalidString);
-//            System.out.println("Converted integer: " + number);
-//        } catch (NumberFormatException e) {
-//            System.out.println("Invalid integer input");
-//        }
-//    }
-//}
 

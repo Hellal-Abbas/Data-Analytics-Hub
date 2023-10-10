@@ -3,13 +3,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DeleteRow {
-	public static void main(String[] args) {
-		final String TABLE_NAME = "Student";
+	
+	public static void removePost (Integer postid) {
+
+		final String TABLE_NAME = "SocialMediaPosts";
 
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
 			String sql = "DELETE FROM " + TABLE_NAME + 
-					" WHERE first_name LIKE 'Tom'";
+					" WHERE postid = " + String.format("%s", postid);
 			
 			int result = stmt.executeUpdate(sql);
 			

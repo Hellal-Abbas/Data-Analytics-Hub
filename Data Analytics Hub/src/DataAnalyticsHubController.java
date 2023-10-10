@@ -41,6 +41,13 @@ public class DataAnalyticsHubController implements Initializable {
 		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);
 
 		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
+		
+		DashboardScene dashboardScene = new DashboardScene();
+		try {
+			borderpane.setCenter(dashboardScene.getScene());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@FXML

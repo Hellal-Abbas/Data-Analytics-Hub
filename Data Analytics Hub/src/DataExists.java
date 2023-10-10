@@ -15,7 +15,6 @@ public class DataExists {
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
 			
-			
 			String query = "SELECT Username FROM " + TABLE_NAME + " WHERE Username = " +
 					String.format("'%s'", Username);
 
@@ -36,7 +35,6 @@ public class DataExists {
 		return result;
 	}
 	
-	
 	public static String passwordExists (String Username, String Password) {
 		
 		final String TABLE_NAME = "Users";
@@ -44,7 +42,6 @@ public class DataExists {
 
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
-			
 			
 			String query = "SELECT * FROM " + TABLE_NAME + " WHERE Username = " +
 					String.format("'%s' and Password = '%s'", Username, Password);
@@ -62,4 +59,33 @@ public class DataExists {
 		
 	}
 
+
+	public static String postidExists (String postid) {
+		
+		final String TABLE_NAME = "SocialMediaPosts";
+		String result = null;
+		String postidResult = null;
+
+		try (Connection con = DatabaseConnection.getConnection();
+				Statement stmt = con.createStatement();) {
+			
+			String query = "SELECT postid FROM " + TABLE_NAME + " WHERE postid = " +
+					String.format("'%s'", postid);
+
+			try (ResultSet resultSet = stmt.executeQuery(query)) {
+				while(resultSet.next()) {
+					postidResult = resultSet.getString("postid");
+					
+					if (Objects.equals(postid, postidResult) == true) {
+						result = postidResult;	
+					} else {
+						result = null;
+					}
+				}
+			} 
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		return result;
+	}
 }
