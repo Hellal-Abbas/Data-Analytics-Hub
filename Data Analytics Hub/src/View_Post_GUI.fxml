@@ -70,4 +70,7 @@
          </children>
       </AnchorPane>
    </top>
+   <left>
+      <AnchorPane prefHeight="14.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </left>
 </BorderPane>
