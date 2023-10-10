@@ -20,8 +20,8 @@ public class DashboardController {
 	@FXML
 	public void AddPostHandler(ActionEvent event) throws IOException {		
 		
-		EditDetailsScene editDetailsScene = new EditDetailsScene();
-		borderpane.setCenter(editDetailsScene.getScene());
+		AddPostScene addPostScene = new AddPostScene();
+		borderpane.setCenter(addPostScene.getScene());
 
 	}	
 	
