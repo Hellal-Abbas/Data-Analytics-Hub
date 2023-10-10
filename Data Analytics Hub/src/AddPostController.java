@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Objects;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -58,27 +59,69 @@ public class AddPostController {
 		
 		if (CheckTableExist.CheckSocialMediaPosts() == false) {CreateTable.SocialMediaPostsTable();}
 		
-		String postid = postidField.getText();
-		String content = contentField.getText();
-		String author = authorField.getText();
-		String likes = likesField.getText();
-		String shares = sharesField.getText();
-		String datetime = datetimeField.getText();
+		String postidfield = postidField.getText();
+		String contentfield = contentField.getText();
+		String authorfield = authorField.getText();
+		String likesfield = likesField.getText();
+		String sharesfield = sharesField.getText();
+		String datetimefield = datetimeField.getText();
 		
-		if (postid.trim().isEmpty()) {postidOutput.setText("Missing!");} else {postidOutput.setText("");}
+		System.out.println(postidfield.trim().isEmpty());
 		
-		if (content.trim().isEmpty()) {contentOutput.setText("Missing!");} else {contentOutput.setText("");}
+		if (postidfield.trim().isEmpty()) {postidOutput.setText("Missing!");} 
+		else if (postidfield.trim().isEmpty() == false) {
+			
+			try {
+				
+	            int postid  = Integer.valueOf(postidfield);
+	            
+	            if (postid < 0) {postidOutput.setText("Must be greater than 0!");}
+				
+			} catch (NumberFormatException e) {
+				postidOutput.setText("Must be a number!");
+			}
+			
+
+			
+		}
 		
-		if (author.trim().isEmpty()) {authorOutput.setText("Missing!");} else {authorOutput.setText("");}
+
+			
+
+
 		
-		if (likes.trim().isEmpty()) {likesOutput.setText("Missing!");} else {likesOutput.setText("");}
+		if (contentfield.trim().isEmpty()) {contentOutput.setText("Missing!");} else {contentOutput.setText("");}
 		
-		if (shares.trim().isEmpty()) {sharesOutput.setText("Missing!");} else {sharesOutput.setText("");}
+		if (authorfield.trim().isEmpty()) {authorOutput.setText("Missing!");} else {authorOutput.setText("");}
 		
-		if (datetime.trim().isEmpty()) {datetimeOutput.setText("Missing!");} else {datetimeOutput.setText("");}
+		if (likesfield.trim().isEmpty()) {likesOutput.setText("Missing!");} else {likesOutput.setText("");}
 		
-		InsertRow.InsertPost(postid, content, author, likes, shares, datetime, username);
+		if (sharesfield.trim().isEmpty()) {sharesOutput.setText("Missing!");} else {sharesOutput.setText("");}
+		
+		if (datetimefield.trim().isEmpty()) {datetimeOutput.setText("Missing!");} else {datetimeOutput.setText("");}
+		
+//		InsertRow.InsertPost(postid, content, author, likes, shares, datetime, username);
 		
 	}
 
 }
+
+//class Main {
+//
+//    public static void main(String[] args) {
+//        String validString = "123";
+//        String invalidString = "123x";
+//        Integer number;
+//
+//        try {
+//            number = Integer.valueOf(validString);
+//            System.out.println("Converted integer: " + number);
+//
+//            number = Integer.valueOf(invalidString);
+//            System.out.println("Converted integer: " + number);
+//        } catch (NumberFormatException e) {
+//            System.out.println("Invalid integer input");
+//        }
+//    }
+//}
+
