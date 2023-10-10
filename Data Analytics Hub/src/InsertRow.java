@@ -26,14 +26,20 @@ public class InsertRow {
 	}
 	
 
-	public static void InsertPost (Integer PostID, String Content, Integer Likes, Integer Shares, String DateTime) {
+	public static void InsertPost (Integer PostID, String Author, String Content, Integer Likes, Integer Shares, String DateTime, String Username) {
 		
 		final String TABLE_NAME = "SocialMediaPosts";
 		
 		try (Connection con = DatabaseConnection.getConnection();
 				Statement stmt = con.createStatement();) {
-			String query = "INSERT INTO " + TABLE_NAME + String.format(" VALUES (%s, %s, %s, %s, %s)", 
-					PostID.toString(), Content.toString(), Likes.toString(), Shares.toString(), DateTime.toString());
+			String query = "INSERT INTO " + TABLE_NAME + String.format(" VALUES (%s, %s, %s, %s, %s, %s, %s)", 
+					PostID.toString(),
+					Content.toString(),
+					Author.toString(),
+					Likes.toString(),
+					Shares.toString(),
+					DateTime.toString(),
+					Username.toString());
 
 			int result = stmt.executeUpdate(query);
 

@@ -40,6 +40,7 @@ public class CreateTable {
 								+ "Likes INT NOT NULL,"
 								+ "Shares INT NOT NULL,"
 								+ "DateTime VARCHAR(255) NOT NULL,"
+								+ "Username VARCHAR(255) NOT NULL,"
 								+ "PRIMARY KEY (PostID))");
 			
 			System.out.println("Table created succesfully!");

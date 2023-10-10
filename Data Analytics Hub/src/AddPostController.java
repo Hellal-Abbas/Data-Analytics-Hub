@@ -55,6 +55,30 @@ public class AddPostController {
 	public void addPostHandler(ActionEvent event) throws IOException {	
 		
 		username = dataSingleton.getUsername();
+		
+		if (CheckTableExist.CheckSocialMediaPosts() == false) {CreateTable.SocialMediaPostsTable();}
+		
+		String postid = postidField.getText();
+		String content = contentField.getText();
+		String author = authorField.getText();
+		String likes = likesField.getText();
+		String shares = sharesField.getText();
+		String datetime = datetimeField.getText();
+		
+		if (postid.trim().isEmpty()) {postidOutput.setText("Missing!");} else {postidOutput.setText("");}
+		
+		if (content.trim().isEmpty()) {contentOutput.setText("Missing!");} else {contentOutput.setText("");}
+		
+		if (author.trim().isEmpty()) {authorOutput.setText("Missing!");} else {authorOutput.setText("");}
+		
+		if (likes.trim().isEmpty()) {likesOutput.setText("Missing!");} else {likesOutput.setText("");}
+		
+		if (shares.trim().isEmpty()) {sharesOutput.setText("Missing!");} else {sharesOutput.setText("");}
+		
+		if (datetime.trim().isEmpty()) {datetimeOutput.setText("Missing!");} else {datetimeOutput.setText("");}
+		
+		InsertRow.InsertPost(postid, content, author, likes, shares, datetime, username);
+		
 	}
 
 }
