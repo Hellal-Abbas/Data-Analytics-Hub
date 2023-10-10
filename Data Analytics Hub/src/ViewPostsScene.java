@@ -1,19 +1,19 @@
 import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 public class ViewPostsScene {
 	
-	public AnchorPane getScene() throws IOException {
+	public BorderPane getScene() throws IOException {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("View_Post_GUI.fxml"));
 		
-		AnchorPane anchorpane = null;
+		BorderPane borderpane = null;
 		
-		anchorpane = loader.load();
+		borderpane = loader.load();
 		
-		return anchorpane;
+		return borderpane;
 		
 	}
 }
