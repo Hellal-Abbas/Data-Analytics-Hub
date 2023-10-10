@@ -9,7 +9,6 @@ public class ViewPostsController{
 	@FXML
 	private BorderPane borderpane;
 	
-	
 	@FXML
 	public void searchPostHandler(ActionEvent event) {
 		
@@ -19,7 +18,7 @@ public class ViewPostsController{
 	public void viewAllHandler(ActionEvent event) throws IOException {
 		
 		PostsTableScene postsTableScene = new PostsTableScene();
-		borderpane.setCenter(postsTableScene.getScene());
+		borderpane.setLeft(postsTableScene.getScene());
 		
 	}
 	

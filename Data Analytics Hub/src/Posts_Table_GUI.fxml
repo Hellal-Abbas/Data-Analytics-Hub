@@ -4,16 +4,16 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PostsTableController">
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PostsTableController">
    <children>
-      <TableView fx:id="postsTable" prefHeight="504.0" prefWidth="919.0">
+      <TableView fx:id="postsTable" prefHeight="410.0" prefWidth="737.0">
          <columns>
             <TableColumn fx:id="postidColumn" prefWidth="68.0" text="Post ID" />
-            <TableColumn fx:id="contentColumn" prefWidth="321.0" text="Content" />
-            <TableColumn fx:id="authorColumn" prefWidth="106.0" text="Author" />
-            <TableColumn fx:id="likesColumn" prefWidth="37.0" text="Likes" />
-            <TableColumn fx:id="sharesColumn" prefWidth="54.0" text="Shares" />
-            <TableColumn fx:id="datetimeColumn" prefWidth="110.0" text="Date/Time" />
+            <TableColumn fx:id="contentColumn" prefWidth="357.0" text="Content" />
+            <TableColumn fx:id="authorColumn" prefWidth="91.0" text="Author" />
+            <TableColumn fx:id="likesColumn" prefWidth="53.0" text="Likes" />
+            <TableColumn fx:id="sharesColumn" prefWidth="67.0" text="Shares" />
+            <TableColumn fx:id="datetimeColumn" prefWidth="100.0" text="Date/Time" />
          </columns>
       </TableView>
    </children>
