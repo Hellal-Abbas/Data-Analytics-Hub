@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -35,8 +34,8 @@ public class DataAnalyticsHubController implements Initializable {
 		
 		username = dataSingleton.getUsername();
 		
-		firstname = userDetails.getUserDetails(username, "firstname");
-		lastname = userDetails.getUserDetails(username, "lastname");
+		firstname = UserDetails.getUserDetails(username, "firstname");
+		lastname = UserDetails.getUserDetails(username, "lastname");
 
 		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
 		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);

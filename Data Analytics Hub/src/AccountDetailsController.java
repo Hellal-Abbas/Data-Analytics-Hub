@@ -34,9 +34,9 @@ public class AccountDetailsController implements Initializable {
 		
 		username = dataSingleton.getUsername();
 		
-		firstname = userDetails.getUserDetails(username, "firstname");
-		lastname = userDetails.getUserDetails(username, "lastname");
-		password = userDetails.getUserDetails(username, "password");
+		firstname = UserDetails.getUserDetails(username, "firstname");
+		lastname = UserDetails.getUserDetails(username, "lastname");
+		password = UserDetails.getUserDetails(username, "password");
 
 		firstname = firstname.substring(0, 1).toUpperCase() + firstname.substring(1);
 		lastname = lastname.substring(0, 1).toUpperCase()  + lastname.substring(1);

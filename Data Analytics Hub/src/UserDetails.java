@@ -3,7 +3,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class userDetails {
+public class UserDetails {
 	
 	public static String getUserDetails(String username, String UserInformation) {
 		
