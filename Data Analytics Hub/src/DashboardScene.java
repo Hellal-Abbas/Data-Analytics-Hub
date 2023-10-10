@@ -3,19 +3,20 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
 public class DashboardScene {
 	
-	public AnchorPane getScene() throws IOException {
+	public BorderPane getScene() throws IOException {
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard_GUI.fxml"));
 		
-		AnchorPane anchorpane = null;
+		BorderPane borderpane = null;
 		
-		anchorpane = loader.load();
+		borderpane = loader.load();
 		
-		return anchorpane;
+		return borderpane;
 		
 	}
 
