@@ -12,8 +12,8 @@ public class DashboardController {
 	@FXML
 	public void ViewPostsHandler(ActionEvent event) throws IOException {	
 		
-		AccountDetailsScene accountDetailsScene = new AccountDetailsScene();
-		borderpane.setCenter(accountDetailsScene.getScene());
+		ViewPostsScene viewPostsScene = new ViewPostsScene();
+		borderpane.setCenter(viewPostsScene.getScene());
 		
 	}
 	

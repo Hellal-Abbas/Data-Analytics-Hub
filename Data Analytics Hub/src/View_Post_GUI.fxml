@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="464.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPostsController">
+   <children>
+      <Label alignment="CENTER" layoutX="17.0" prefHeight="60.0" prefWidth="100.0" text="Posts">
+         <font>
+            <Font name="Calibri Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="postsTable" layoutX="33.0" layoutY="69.0" prefHeight="380.0" prefWidth="697.0">
+        <columns>
+          <TableColumn fx:id="postidColumn" prefWidth="68.0" text="Post ID" />
+          <TableColumn fx:id="contentColumn" prefWidth="321.0" text="Content" />
+            <TableColumn fx:id="authorColumn" prefWidth="106.0" text="Author" />
+            <TableColumn fx:id="likesColumn" prefWidth="37.0" text="Likes" />
+            <TableColumn fx:id="sharesColumn" prefWidth="54.0" text="Shares" />
+            <TableColumn fx:id="datetimeColumn" prefWidth="110.0" text="Date/Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
