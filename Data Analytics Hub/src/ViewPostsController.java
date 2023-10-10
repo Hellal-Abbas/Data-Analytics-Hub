@@ -24,7 +24,10 @@ public class ViewPostsController implements Initializable {
 	}
 	
 	@FXML
-	public void searchPostHandler(ActionEvent event) {
+	public void searchPostHandler(ActionEvent event) throws IOException {
+		
+		SearchPostScene searchPostScene = new SearchPostScene();
+		borderpane.setCenter(searchPostScene.getScene());
 		
 	}
 	
@@ -37,7 +40,10 @@ public class ViewPostsController implements Initializable {
 	}
 	
 	@FXML
-	public void deletePostHandler(ActionEvent event) {
+	public void deletePostHandler(ActionEvent event) throws IOException {
+		
+		DeletePostScene deletePostScene = new DeletePostScene();
+		borderpane.setCenter(deletePostScene.getScene());
 		
 	}
 	
