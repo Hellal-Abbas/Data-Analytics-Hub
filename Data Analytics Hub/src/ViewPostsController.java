@@ -43,12 +43,12 @@ public class ViewPostsController implements Initializable {
 		
 		username = dataSingleton.getUsername();
 		
-		postidColumn.setCellValueFactory(new PropertyValueFactory<>("PostID"));
+		postidColumn.setCellValueFactory(new PropertyValueFactory<>("Postid"));
 		contentColumn.setCellValueFactory(new PropertyValueFactory<>("Content"));
 		authorColumn.setCellValueFactory(new PropertyValueFactory<>("Author"));
 		likesColumn.setCellValueFactory(new PropertyValueFactory<>("Likes"));
 		sharesColumn.setCellValueFactory(new PropertyValueFactory<>("Shares"));
-		datetimeColumn.setCellValueFactory(new PropertyValueFactory<>("DateTime"));
+		datetimeColumn.setCellValueFactory(new PropertyValueFactory<>("datetime"));
 		
 		postsTable.setItems(ViewPostsQuery.ViewPosts(username));
 	}
