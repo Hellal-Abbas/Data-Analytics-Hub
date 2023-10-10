@@ -13,7 +13,7 @@ public class DashboardController {
 	public void ViewPostsHandler(ActionEvent event) throws IOException {	
 		
 		ViewPostsScene viewPostsScene = new ViewPostsScene();
-//		borderpane.setCenter(viewPostsScene.getScene());
+		borderpane.setCenter(viewPostsScene.getScene());
 		
 	}
 	

@@ -4,10 +4,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PostsTableController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PostsTableController">
    <children>
-      <TableView fx:id="postsTable" prefHeight="380.0" prefWidth="697.0">
+      <TableView fx:id="postsTable" prefHeight="504.0" prefWidth="919.0">
          <columns>
             <TableColumn fx:id="postidColumn" prefWidth="68.0" text="Post ID" />
             <TableColumn fx:id="contentColumn" prefWidth="321.0" text="Content" />

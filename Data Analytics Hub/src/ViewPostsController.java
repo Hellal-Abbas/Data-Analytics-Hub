@@ -11,22 +11,25 @@ public class ViewPostsController{
 	
 	
 	@FXML
-	public void searchPostHandler(ActionEvent event) throws IOException {
+	public void searchPostHandler(ActionEvent event) {
 		
 	}
 	
 	@FXML
 	public void viewAllHandler(ActionEvent event) throws IOException {
 		
-	}
-	
-	@FXML
-	public void deletePostHandler(ActionEvent event) throws IOException {
+		PostsTableScene postsTableScene = new PostsTableScene();
+		borderpane.setCenter(postsTableScene.getScene());
 		
 	}
 	
 	@FXML
-	public void exportPostHandler(ActionEvent event) throws IOException {
+	public void deletePostHandler(ActionEvent event) {
+		
+	}
+	
+	@FXML
+	public void exportPostHandler(ActionEvent event) {
 		
 	}
 	
