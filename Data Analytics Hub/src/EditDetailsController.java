@@ -78,6 +78,10 @@ public class EditDetailsController {
 		else if (Objects.equals(password, "") == false) {
 			UpdateTable.UpdateUserDetails("password", password, username);
 			passwordOutput.setText("Updated!");	}
+//		
+//		DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
+//		
+//		dataAnalyticsHubController.setWelcomeName(firstname, lastname);
 	}
 
 }

@@ -25,6 +25,8 @@ public class DataAnalyticsHubController implements Initializable {
 	
 	@FXML Label welcomeOutput;
 	
+	
+	
     public void setWelcomeName(String firstname, String lastname) {
 		welcomeOutput.setText("Welcome " + firstname + " " + lastname + ".");
     }
