@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="464.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPostController">
+   <children>
+      <Label alignment="CENTER" layoutX="53.0" prefHeight="60.0" prefWidth="251.0" text="Add Post">
+         <font>
+            <Font name="Calibri Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="73.0" prefHeight="30.0" prefWidth="100.0" text="Post ID:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="106.0" prefHeight="30.0" prefWidth="100.0" text="Content:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="239.0" prefHeight="30.0" prefWidth="100.0" text="Author:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="271.0" prefHeight="30.0" prefWidth="100.0" text="Likes:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="305.0" prefHeight="30.0" prefWidth="100.0" text="Shares:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="42.0" layoutY="338.0" prefHeight="30.0" prefWidth="100.0" text="Date/Time:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="postidField" layoutX="147.0" layoutY="76.0" promptText="Number etc. 1234" />
+      <TextArea fx:id="contentField" layoutX="147.0" layoutY="115.0" prefHeight="114.0" prefWidth="149.0" promptText="Text etc. Today was a good day!" wrapText="true" />
+      <TextField fx:id="authorField" layoutX="147.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" promptText="Text etc. John Smith" />
+      <TextField fx:id="likesField" layoutX="147.0" layoutY="274.0" promptText="Number etc. 1234" />
+      <TextField fx:id="sharesField" layoutX="147.0" layoutY="308.0" promptText="Number etc. 1234" />
+      <TextField fx:id="datetimeField" layoutX="147.0" layoutY="341.0" promptText="DD/MM/YYYY HH:MM" />
+      <Label fx:id="postidOutput" layoutX="313.0" layoutY="80.0">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="contentOutput" layoutX="313.0" layoutY="163.0">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="authorOutput" layoutX="313.0" layoutY="246.0">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="likesOutput" layoutX="313.0" layoutY="278.0">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="sharesOutput" layoutX="313.0" layoutY="313.0">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="datetimeOutput" layoutX="313.0" layoutY="346.0">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="postaddedOutput" layoutX="179.0" layoutY="383.0" textFill="#14b54d">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="57.0" layoutY="381.0" mnemonicParsing="false" onAction="#addPostHandler" style="-fx-background-color: white;" text="Add Post">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect></Button>
+      <Line endX="180.0" layoutX="125.0" layoutY="72.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="125.0" layoutY="105.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="125.0" layoutY="237.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="125.0" layoutY="270.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="125.0" layoutY="303.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="126.0" layoutY="337.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="126.0" layoutY="370.0" startX="-70.0" />
+      <Line endX="-100.0" endY="308.0" layoutX="155.0" layoutY="61.0" startX="-100.0" startY="11.0" />
+      <Line endX="-100.0" endY="308.0" layoutX="406.0" layoutY="61.0" startX="-100.0" startY="11.0" />
+   </children>
+</AnchorPane>

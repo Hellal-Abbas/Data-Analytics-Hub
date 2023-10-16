@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PostsTableController">
+   <children>
+      <TableView fx:id="postsTable">
+         <columns>
+            <TableColumn fx:id="postidColumn" prefWidth="62.0" text="Post ID" />
+            <TableColumn fx:id="contentColumn" prefWidth="460.0" text="Content" />
+            <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="likesColumn" prefWidth="54.0" text="Likes" />
+            <TableColumn fx:id="sharesColumn" prefWidth="61.0" text="Shares" />
+            <TableColumn fx:id="datetimeColumn" prefWidth="117.0" text="Date/Time" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
