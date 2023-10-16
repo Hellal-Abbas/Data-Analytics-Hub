@@ -41,7 +41,7 @@ public class PostsTableController implements Initializable {
 
 	DataSingleton dataSingleton = DataSingleton.getInstance();
 
-	ObservableList<PostsTableModel> listview = FXCollections.observableArrayList();
+	ObservableList<PostsTableModel> Postslistview = FXCollections.observableArrayList();
 
 	@Override
 	public void initialize(URL url, ResourceBundle resource) {

@@ -2,15 +2,16 @@ package model;
 
 public class PostsTableModel {
 	
-	int postid; String content; String author; int likes; int shares; String datetime;
+	int postid; String content; String author; int likes; int shares; String datetime; String username;
 	
-	public PostsTableModel(int postid, String content, String author, int likes, int shares, String datetime) {
+	public PostsTableModel(int postid, String content, String author, int likes, int shares, String datetime, String username) {
 		this.postid = postid;
 		this.content = content;
 		this.author = author;
 		this.likes = likes;
 		this.shares = shares;
 		this.datetime = datetime;
+		this.username = username;
 	}
 	
 	public int getPostid() {
@@ -61,4 +62,11 @@ public class PostsTableModel {
 		this.datetime = datetime;
 	}	
 
+	public String getUsername() {
+		return username;
+	}
+	
+	public void setUsername(String username) {
+		this.username = username;
+	}	
 }
