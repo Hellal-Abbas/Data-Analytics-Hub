@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TopLikedPostsController">
+   <children>
+      <BorderPane layoutY="1.0" maxHeight="450.0" maxWidth="820.0" minHeight="450.0" minWidth="820.0">
+         <left>
+            <TableView fx:id="userTable" maxHeight="600.0" maxWidth="500.0" prefHeight="400.0" prefWidth="98.0" style="-fx-border-color: black; -fx-border-width: 0px 2px 0px 0px;" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="users" prefWidth="97.0" text="Users" />
+               </columns>
+            </TableView>
+         </left>
+         <top>
+            <AnchorPane prefHeight="55.0" prefWidth="821.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Label layoutX="10.0" layoutY="18.0" prefHeight="21.0" prefWidth="159.0" text="Total posts to display:">
+                     <font>
+                        <Font name="Calibri" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="315.0" layoutY="18.0" prefHeight="21.0" prefWidth="140.0" text="Filter by username:">
+                     <font>
+                        <Font name="Calibri" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nPostsDisplayField" layoutX="170.0" layoutY="16.0" prefHeight="25.0" prefWidth="126.0" />
+                  <TextField fx:id="filterByUsernameField" layoutX="466.0" layoutY="16.0" />
+                  <Button layoutX="702.0" layoutY="7.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Submit">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <TableView fx:id="postsTable" prefWidth="757.0" BorderPane.alignment="TOP_LEFT">
+               <columns>
+                  <TableColumn fx:id="postidColumn" prefWidth="51.0" text="Post ID" />
+                  <TableColumn fx:id="contentColumn" prefWidth="329.0" text="Content" />
+                  <TableColumn fx:id="authorColumn" prefWidth="91.0" text="Author" />
+                  <TableColumn fx:id="likesColumn" prefWidth="55.0" text="Likes" />
+                  <TableColumn fx:id="sharesColumn" prefWidth="67.0" text="Shares" />
+                  <TableColumn fx:id="datetimeColumn" prefWidth="128.0" text="Date/Time" />
+               </columns>
+            </TableView>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

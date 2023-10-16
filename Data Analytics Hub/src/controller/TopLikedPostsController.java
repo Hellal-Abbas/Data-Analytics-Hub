@@ -1,22 +1,34 @@
 package controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
 
 import database.DataSingleton;
 import database.ViewPostsQuery;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.PostsTableModel;
 
-public class PostsTableController implements Initializable {
+public class TopLikedPostsController {
 
 	private String username;
+
+	@FXML
+	private TextField nPostsDisplayField;
+
+	@FXML
+	private TextField filterByUsernameField;
+
+	@FXML
+	private TableView userTable;
+
+	@FXML
+	private TableColumn users;
 
 	@FXML
 	private TableView<PostsTableModel> postsTable;
@@ -43,8 +55,8 @@ public class PostsTableController implements Initializable {
 
 	ObservableList<PostsTableModel> listview = FXCollections.observableArrayList();
 
-	@Override
-	public void initialize(URL url, ResourceBundle resource) {
+	@FXML
+	public void submitHandler(ActionEvent event) throws IOException {
 
 		username = dataSingleton.getUsername();
 
@@ -56,6 +68,7 @@ public class PostsTableController implements Initializable {
 		datetimeColumn.setCellValueFactory(new PropertyValueFactory<>("datetime"));
 
 		postsTable.setItems(ViewPostsQuery.ViewPosts(username));
+
 	}
 
 }

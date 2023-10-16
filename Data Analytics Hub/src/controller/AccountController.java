@@ -41,6 +41,7 @@ public class AccountController implements Initializable {
 	public void EditDetailsHandler(ActionEvent event) throws IOException {
 
 		EditDetailsScene editDetailsScene = new EditDetailsScene();
+
 		borderpane.setCenter(editDetailsScene.getScene());
 
 	}
