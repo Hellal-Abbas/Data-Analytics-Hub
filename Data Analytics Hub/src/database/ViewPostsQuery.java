@@ -14,7 +14,6 @@ public class ViewPostsQuery {
 	public static ObservableList<PostsTableModel> ViewPosts(String username) {
 
 		ObservableList<PostsTableModel> listview = FXCollections.observableArrayList();
-
 		final String TABLE_NAME = "SocialMediaPosts";
 
 		try (Connection con = DatabaseConnection.getConnection(); Statement stmt = con.createStatement();) {
@@ -26,7 +25,6 @@ public class ViewPostsQuery {
 							resultSet.getString("Author"), resultSet.getInt("Likes"), resultSet.getInt("Shares"),
 							resultSet.getString("DateTime"), resultSet.getString("username")));
 				}
-
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -47,13 +45,10 @@ public class ViewPostsQuery {
 				while (resultSet.next()) {
 					result = resultSet.getString(String.format("%s", column));
 				}
-
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
-
 		return result;
 	}
-
 }
