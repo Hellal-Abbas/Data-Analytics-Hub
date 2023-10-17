@@ -5,16 +5,14 @@ import java.text.SimpleDateFormat;
 
 public class DateTimeCheck {
 
+	// Method that checks if the entered date string is in the correct format
 	public static boolean CheckValidity(String DateTime) {
-
 		// Initialising the type of date time format
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		dateFormat.setLenient(false);
-
 		try {
 			// If user inputed data and time is in the correct, returns true
 			dateFormat.parse(DateTime.trim());
-
 		} catch (ParseException pe) {
 			// If user inputed date and time is in the wrong format, returns false
 			return false;
