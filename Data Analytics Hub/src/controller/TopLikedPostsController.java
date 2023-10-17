@@ -81,11 +81,6 @@ public class TopLikedPostsController implements Initializable {
 
 		userTable.setItems(TopLikedPostsQuery.AllUsers(""));
 
-	}
-
-	@FXML
-	public void submitHandler(ActionEvent event) throws IOException {
-
 		postidColumn.setCellValueFactory(new PropertyValueFactory<>("Postid"));
 		contentColumn.setCellValueFactory(new PropertyValueFactory<>("Content"));
 		authorColumn.setCellValueFactory(new PropertyValueFactory<>("Author"));
@@ -94,39 +89,60 @@ public class TopLikedPostsController implements Initializable {
 		datetimeColumn.setCellValueFactory(new PropertyValueFactory<>("datetime"));
 		usernameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
 
+		postsTable.setItems(TopLikedPostsQuery.AllPosts(""));
+
+	}
+
+	@FXML
+	public void submitHandler(ActionEvent event) throws IOException {
+
 		String numPosts = nPostsDisplayField.getText();
 		String usernameFilter = filterByUsernameField.getText();
 
-//		if (numPosts.trim().isEmpty()) {likesOutput.setText("Missing!");} 
-//		else {
-//			try {
-//				numOfPosts  = Integer.valueOf(numPosts);
-//	            if (likes < 0) {likesOutput.setText("Must be greater than 0!");}             
-//	            else {
-//	            	likesOutput.setText("");
-//	            	likesValidity = true;
-//	            }
-//			} catch (NumberFormatException e) {likesOutput.setText("Must be a number!");}
-//		}
-//		
-		String UsernameExists = DataExists.usernameExists(usernameFilter);
+		boolean numPostsValidity = false;
+		boolean usernameFilterValidity = false;
 
-		if (Objects.equals(usernameFilter, UsernameExists) == true) {
-
-			userOutput.setText("Not a User!");
-
-		} else if (Objects.equals(usernameFilter, UsernameExists) == false) {
-
+		if (Objects.equals(numPosts, "") == true) {
+			numberOutput.setText("");
+			numPostsValidity = true;
+		} else {
+			try {
+				int numOfPosts = Integer.valueOf(numPosts);
+				if (numOfPosts < 0) {
+					numberOutput.setText("Must be positive!");
+				} else {
+					numberOutput.setText("");
+					numPostsValidity = true;
+				}
+			} catch (NumberFormatException e) {
+				numberOutput.setText("Number Required");
+			}
 		}
 
-		if ((Objects.equals(numPosts, "") == true) && (Objects.equals(usernameFilter, "") == true)) {
-			postsTable.setItems(TopLikedPostsQuery.AllPosts(""));
-		} else if ((Objects.equals(numPosts, "") == false) && (Objects.equals(usernameFilter, "") == true)) {
-			postsTable.setItems(TopLikedPostsQuery.NumOfPosts(Integer.parseInt(numPosts)));
-		} else if ((Objects.equals(numPosts, "") == true) && (Objects.equals(usernameFilter, "") == false)) {
-			postsTable.setItems(TopLikedPostsQuery.Usernameonly(usernameFilter));
-		} else if ((Objects.equals(numPosts, "") == false) && (Objects.equals(usernameFilter, "") == false)) {
-			postsTable.setItems(TopLikedPostsQuery.NumOfPostsWithUsername(usernameFilter, Integer.parseInt(numPosts)));
+		String UsernameExists = DataExists.usernameExists(usernameFilter);
+
+		if (Objects.equals(usernameFilter, "") == true) {
+			userOutput.setText("");
+			usernameFilterValidity = true;
+		} else if (Objects.equals(usernameFilter, UsernameExists) == false) {
+			userOutput.setText("User not in records!");
+			usernameFilterValidity = false;
+		} else if (Objects.equals(usernameFilter, UsernameExists) == true) {
+			userOutput.setText("");
+			usernameFilterValidity = true;
+		}
+
+		if ((numPostsValidity == true) && (usernameFilterValidity == true)) {
+			if ((Objects.equals(numPosts, "") == true) && (Objects.equals(usernameFilter, "") == true)) {
+				postsTable.setItems(TopLikedPostsQuery.AllPosts(""));
+			} else if ((Objects.equals(numPosts, "") == false) && (Objects.equals(usernameFilter, "") == true)) {
+				postsTable.setItems(TopLikedPostsQuery.NumOfPosts(Integer.parseInt(numPosts)));
+			} else if ((Objects.equals(numPosts, "") == true) && (Objects.equals(usernameFilter, "") == false)) {
+				postsTable.setItems(TopLikedPostsQuery.Usernameonly(usernameFilter));
+			} else if ((Objects.equals(numPosts, "") == false) && (Objects.equals(usernameFilter, "") == false)) {
+				postsTable.setItems(
+						TopLikedPostsQuery.NumOfPostsWithUsername(usernameFilter, Integer.parseInt(numPosts)));
+			}
 		}
 
 	}

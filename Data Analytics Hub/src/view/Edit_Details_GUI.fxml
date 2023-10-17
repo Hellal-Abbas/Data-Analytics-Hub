@@ -8,67 +8,70 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="249.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditDetailsController">
+<AnchorPane prefHeight="215.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditDetailsController">
    <children>
-      <Label alignment="CENTER" layoutX="53.0" prefHeight="60.0" prefWidth="251.0" text="Edit Details">
+      <Label alignment="CENTER" layoutX="8.0" layoutY="4.0" prefHeight="50.0" prefWidth="165.0" text="Edit Details">
          <font>
-            <Font name="Calibri Bold" size="30.0" />
+            <Font name="Calibri Bold" size="35.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="73.0" prefHeight="30.0" prefWidth="100.0" text="Firstname:">
+      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="68.0" prefHeight="30.0" prefWidth="100.0" text="Firstname:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="106.0" prefHeight="30.0" prefWidth="100.0" text="Lastname:">
+      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="101.0" prefHeight="30.0" prefWidth="100.0" text="Lastname:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="140.0" prefHeight="30.0" prefWidth="100.0" text="Username:">
+      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="135.0" prefHeight="30.0" prefWidth="100.0" text="Username:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="172.0" prefHeight="30.0" prefWidth="100.0" text="Password:">
+      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="167.0" prefHeight="30.0" prefWidth="100.0" text="Password:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Line endX="180.0" layoutX="125.0" layoutY="105.0" startX="-70.0" />
-      <Line endX="180.0" layoutX="125.0" layoutY="138.0" startX="-70.0" />
-      <Line endX="180.0" layoutX="125.0" layoutY="171.0" startX="-70.0" />
-      <Line endX="180.0" layoutX="125.0" layoutY="204.0" startX="-70.0" />
-      <Line endX="80.0" layoutX="40.0" layoutY="137.0" rotate="90.0" startX="-51.0" />
-      <Line endX="180.0" layoutX="125.0" layoutY="72.0" startX="-70.0" />
-      <Line endX="80.0" layoutX="291.0" layoutY="138.0" rotate="90.0" startX="-52.0" />
-      <TextField fx:id="firstnameField" layoutX="150.0" layoutY="76.0" />
-      <TextField fx:id="lastnameField" layoutX="150.0" layoutY="109.0" />
-      <TextField fx:id="usernameField" layoutX="150.0" layoutY="143.0" />
-      <TextField fx:id="passwordField" layoutX="150.0" layoutY="175.0" />
-      <Label fx:id="firstnameOutput" layoutX="313.0" layoutY="80.0">
+      <Line endX="180.0" layoutX="95.0" layoutY="100.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="95.0" layoutY="133.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="95.0" layoutY="166.0" startX="-70.0" />
+      <Line endX="180.0" layoutX="95.0" layoutY="198.0" startX="-70.0" />
+      <Line endX="80.0" layoutX="10.0" layoutY="132.0" rotate="90.0" startX="-51.0" />
+      <Line endX="180.0" layoutX="95.0" layoutY="67.0" startX="-70.0" />
+      <Line endX="80.0" layoutX="261.0" layoutY="133.0" rotate="90.0" startX="-52.0" />
+      <TextField fx:id="firstnameField" layoutX="120.0" layoutY="71.0" />
+      <TextField fx:id="lastnameField" layoutX="120.0" layoutY="104.0" />
+      <TextField fx:id="usernameField" layoutX="120.0" layoutY="138.0" />
+      <TextField fx:id="passwordField" layoutX="120.0" layoutY="170.0" />
+      <Label fx:id="firstnameOutput" layoutX="278.0" layoutY="74.0" textFill="#cc0000">
          <font>
-            <Font name="Calibri" size="12.0" />
+            <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lastnameOutput" layoutX="313.0" layoutY="113.0">
+      <Label fx:id="lastnameOutput" layoutX="278.0" layoutY="107.0" textFill="#cc0000">
          <font>
-            <Font name="Calibri" size="12.0" />
+            <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="usernameOutput" layoutX="313.0" layoutY="147.0">
+      <Label fx:id="usernameOutput" layoutX="278.0" layoutY="140.0" textFill="#cc0000">
          <font>
-            <Font name="Calibri" size="12.0" />
+            <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="passwordOutput" layoutX="313.0" layoutY="179.0">
+      <Label fx:id="passwordOutput" layoutX="278.0" layoutY="172.0" textFill="#cc0000">
          <font>
-            <Font name="Calibri" size="12.0" />
+            <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="55.0" layoutY="215.0" mnemonicParsing="false" onAction="#updateDetailsHandler" style="-fx-background-color: white;" text="Update Details" translateX="2.0">
+      <Button layoutX="-150.0" layoutY="209.0" mnemonicParsing="false" onAction="#updateDetailsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Update Details" translateX="175.0">
          <effect>
-            <DropShadow blurType="ONE_PASS_BOX" />
-         </effect></Button>
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

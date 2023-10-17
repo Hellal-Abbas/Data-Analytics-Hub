@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
 import view.DeletePostScene;
+import view.ExportPostScene;
 import view.PostsTableScene;
 import view.SearchPostScene;
 import view.TopLikedPostsScene;
@@ -62,7 +63,10 @@ public class ViewPostsController implements Initializable {
 	}
 
 	@FXML
-	public void exportPostHandler(ActionEvent event) {
+	public void exportPostHandler(ActionEvent event) throws IOException {
+
+		ExportPostScene exportPostScene = new ExportPostScene();
+		borderpane.setCenter(exportPostScene.getScene());
 
 	}
 

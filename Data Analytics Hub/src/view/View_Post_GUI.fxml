@@ -3,85 +3,95 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" prefHeight="66.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewPostsController">
+<BorderPane fx:id="borderpane" prefHeight="55.0" prefWidth="802.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewPostsController">
    <top>
-      <AnchorPane prefHeight="66.0" prefWidth="668.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="55.0" prefWidth="802.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 0.5px 0px;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutY="-1.0" prefHeight="60.0" prefWidth="100.0" text="Posts">
+            <Label alignment="CENTER" layoutY="6.0" prefHeight="41.0" prefWidth="161.0" text="View Posts" translateX="10.0">
                <font>
-                  <Font name="Calibri Bold" size="30.0" />
+                  <Font name="Calibri Bold" size="35.0" />
                </font>
             </Label>
-            <ButtonBar layoutX="87.0" layoutY="9.0" prefHeight="40.0" prefWidth="563.0">
-               <buttons>
-                  <Button alignment="CENTER" contentDisplay="TOP" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#viewAllHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="View All">
-                     <effect>
-                        <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-                     </effect>
-                     <opaqueInsets>
-                        <Insets bottom="100.0" />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="CENTER" contentDisplay="TOP" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#searchPostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="Search Post">
-                     <effect>
-                        <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-                     </effect>
-                     <opaqueInsets>
-                        <Insets bottom="100.0" />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="CENTER" contentDisplay="TOP" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#toplikedPostsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="Top Liked Posts">
-                     <effect>
-                        <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-                     </effect>
-                     <opaqueInsets>
-                        <Insets bottom="100.0" />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="CENTER" contentDisplay="TOP" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#deletePostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="Delete Post">
-                     <effect>
-                        <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-                     </effect>
-                     <opaqueInsets>
-                        <Insets bottom="100.0" />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="CENTER" contentDisplay="TOP" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#exportPostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="Export Post">
-                     <effect>
-                        <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-                     </effect>
-                     <opaqueInsets>
-                        <Insets bottom="100.0" />
-                     </opaqueInsets>
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Button>
-               </buttons>
-            </ButtonBar>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutY="10.0" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#viewAllHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="View All" translateX="175.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutX="-1.0" layoutY="10.0" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#searchPostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Search Post" translateX="300.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutY="10.0" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#toplikedPostsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Top Liked" translateX="425.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutY="10.0" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#deletePostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Delete Post" translateX="550.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutY="10.0" maxHeight="35.0" maxWidth="105.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#exportPostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Export Post" translateX="675.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </top>
    <left>
-      <AnchorPane prefHeight="14.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="8.0" prefWidth="86.0" BorderPane.alignment="CENTER" />
    </left>
 </BorderPane>

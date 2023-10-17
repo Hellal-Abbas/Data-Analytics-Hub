@@ -34,4 +34,26 @@ public class ViewPostsQuery {
 		return listview;
 	}
 
+	public static String PostDetailsExport(String column, String postid) {
+
+		final String TABLE_NAME = "SocialMediaPosts";
+		String result = null;
+
+		try (Connection con = DatabaseConnection.getConnection(); Statement stmt = con.createStatement();) {
+			String query = "SELECT " + String.format("%s", column) + " FROM " + TABLE_NAME + " WHERE postid = "
+					+ String.format("'%s'", postid);
+
+			try (ResultSet resultSet = stmt.executeQuery(query)) {
+				while (resultSet.next()) {
+					result = resultSet.getString(String.format("%s", column));
+				}
+
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+
+		return result;
+	}
+
 }

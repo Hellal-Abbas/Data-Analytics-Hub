@@ -9,42 +9,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" prefHeight="491.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountController">
-   <left>
-      <AnchorPane prefHeight="444.0" prefWidth="116.0" style="-fx-background-color: #E9E9E9; -fx-border-color: black; -fx-border-width: 0px 0.5px 0px 0px;" BorderPane.alignment="CENTER">
-         <children>
-          <Button alignment="CENTER" contentDisplay="TOP" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" onAction="#AccountDetailsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="Account Details">
-               <effect>
-                  <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-               </effect>
-               <opaqueInsets>
-                  <Insets bottom="100.0" />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" layoutX="4.0" layoutY="61.0" mnemonicParsing="false" onAction="#EditDetailsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #E9E9E9;" text="Edit Details">
-               <effect>
-                  <DropShadow blurType="ONE_PASS_BOX" height="20.0" radius="9.5" width="20.0" />
-               </effect>
-               <opaqueInsets>
-                  <Insets bottom="100.0" />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-            </Button>
-         </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </AnchorPane>
-   </left>
+<BorderPane fx:id="borderpane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountController">
    <top>
-      <AnchorPane prefHeight="47.0" prefWidth="615.0" style="-fx-border-color: black; -fx-border-width: 0px 0px 0.5px 0px; -fx-background-color: #E9E9E9;" BorderPane.alignment="TOP_LEFT">
+      <AnchorPane prefHeight="55.0" prefWidth="615.0" style="-fx-border-color: black; -fx-border-width: 0.5px 0px 0.5px 0px; -fx-background-color: white;" BorderPane.alignment="TOP_LEFT">
          <children>
-            <Label layoutX="4.0" layoutY="2.0" text="Account">
+            <Label layoutY="6.0" text="Account" translateX="10.0">
                <font>
                   <Font name="Calibri Bold" size="35.0" />
                </font>
@@ -52,6 +21,34 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Label>
+          <Button alignment="CENTER" contentDisplay="TOP" layoutX="175.0" layoutY="10.0" mnemonicParsing="false" onAction="#AccountDetailsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Account Detail">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" onAction="#EditDetailsHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Edit Details">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="100.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Button>
          </children>
          <cursor>
             <Cursor fx:constant="DEFAULT" />

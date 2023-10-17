@@ -46,30 +46,42 @@
          <GridPane.margin>
             <Insets right="20.0" />
          </GridPane.margin>
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
       </TextField>
       <TextField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets right="20.0" />
          </GridPane.margin>
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
       </TextField>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#loginHandler" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: white;" text="LOGIN" translateX="4.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#loginHandler" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: white;" text="LOGIN" translateX="1.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <effect>
-            <DropShadow blurType="ONE_PASS_BOX" />
-         </effect></Button>
-      <Label fx:id="incorrectUsernameOutput" alignment="CENTER" prefHeight="24.0" prefWidth="155.0" textFill="#bf4545" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="incorrectUsernameOutput" alignment="CENTER" prefHeight="24.0" prefWidth="155.0" textFill="#cc0000" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <font>
             <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="incorrectPasswordOutput" alignment="CENTER" prefHeight="22.0" prefWidth="155.0" textFill="#bf4545" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <Label fx:id="incorrectPasswordOutput" alignment="CENTER" prefHeight="22.0" prefWidth="155.0" textFill="#cc0000" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <font>
             <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#goBackHandler" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: white;" text="BACK" translateX="88.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#goBackHandler" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: white;" text="BACK" translateX="91.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <effect>
-            <DropShadow blurType="ONE_PASS_BOX" />
-         </effect></Button>
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Button>
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" />

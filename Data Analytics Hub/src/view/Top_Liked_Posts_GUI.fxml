@@ -10,51 +10,65 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TopLikedPostsController">
+<AnchorPane prefHeight="456.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TopLikedPostsController">
    <children>
-      <BorderPane layoutY="1.0" maxHeight="450.0" maxWidth="913.0" minHeight="450.0" minWidth="820.0" prefHeight="450.0" prefWidth="913.0">
+      <BorderPane layoutY="1.0" maxHeight="483.0" maxWidth="913.0" minHeight="450.0" minWidth="820.0" prefHeight="457.0" prefWidth="913.0">
          <left>
             <TableView fx:id="userTable" maxHeight="600.0" maxWidth="500.0" prefHeight="400.0" prefWidth="98.0" BorderPane.alignment="CENTER">
                <columns>
-                  <TableColumn fx:id="users" prefWidth="97.0" text="Users" />
+                  <TableColumn fx:id="users" prefWidth="97.0" text="Current Users" />
                </columns>
             </TableView>
          </left>
          <top>
-            <AnchorPane prefHeight="55.0" prefWidth="821.0" BorderPane.alignment="TOP_LEFT">
+            <AnchorPane prefHeight="60.0" prefWidth="913.0" BorderPane.alignment="TOP_LEFT">
                <children>
-                  <Label layoutX="4.0" layoutY="17.0" prefHeight="21.0" prefWidth="159.0" text="Total posts to display:">
+                  <Label layoutX="170.0" layoutY="15.0" prefHeight="21.0" prefWidth="159.0" text="Total posts to display:">
                      <font>
                         <Font name="Calibri" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="415.0" layoutY="17.0" prefHeight="21.0" prefWidth="140.0" text="Filter by username:">
+                  <Label layoutX="474.0" layoutY="17.0" prefHeight="21.0" prefWidth="140.0" text="Filter by username:">
                      <font>
                         <Font name="Calibri" size="17.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="nPostsDisplayField" layoutX="160.0" layoutY="15.0" prefHeight="25.0" prefWidth="126.0" />
-                  <TextField fx:id="filterByUsernameField" layoutX="555.0" layoutY="15.0" />
-                  <Button layoutX="798.0" layoutY="10.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Submit">
+                  <TextField fx:id="nPostsDisplayField" layoutX="329.0" layoutY="13.0" prefHeight="25.0" prefWidth="126.0">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="filterByUsernameField" layoutX="614.0" layoutY="15.0">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font></TextField>
+                  <Button layoutX="782.0" layoutY="9.0" mnemonicParsing="false" onAction="#submitHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Submit">
                      <effect>
-                        <DropShadow blurType="ONE_PASS_BOX" />
+                        <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
                      </effect>
-                  </Button>
-                  <Label fx:id="numberOutput" layoutX="296.0" layoutY="17.0" prefHeight="21.0" prefWidth="88.0" text="Not a number!">
                      <font>
-                        <Font name="Calibri" size="13.0" />
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="numberOutput" alignment="CENTER" layoutX="330.0" layoutY="39.0" prefHeight="21.0" prefWidth="124.0" textFill="#cc0000">
+                     <font>
+                        <Font name="Calibri" size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="userOutput" layoutX="715.0" layoutY="17.0" prefHeight="21.0" prefWidth="71.0" text="Not a User!">
+                  <Label fx:id="userOutput" layoutX="616.0" layoutY="38.0" prefHeight="21.0" prefWidth="147.0" textFill="#cc0000">
                      <font>
-                        <Font name="Calibri" size="13.0" />
+                        <Font name="Calibri" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="-73.0" layoutY="3.0" text="Top Liked Posts">
+                     <font>
+                        <Font name="Calibri Bold" size="35.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
          </top>
          <right>
-            <TableView fx:id="postsTable" prefHeight="395.0" prefWidth="809.0" BorderPane.alignment="TOP_LEFT">
+            <TableView fx:id="postsTable" prefHeight="405.0" prefWidth="809.0" BorderPane.alignment="TOP_LEFT">
                <columns>
                   <TableColumn fx:id="postidColumn" prefWidth="51.0" text="Post ID" />
                   <TableColumn fx:id="contentColumn" prefWidth="301.0" text="Content" />

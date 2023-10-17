@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PostsTableController">
+<AnchorPane prefHeight="462.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PostsTableController">
    <children>
-      <TableView fx:id="postsTable">
+      <TableView fx:id="postsTable" layoutY="60.0" prefHeight="400.0" prefWidth="911.0">
          <columns>
             <TableColumn fx:id="postidColumn" prefWidth="62.0" text="Post ID" />
-            <TableColumn fx:id="contentColumn" prefWidth="460.0" text="Content" />
-            <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
-            <TableColumn fx:id="likesColumn" prefWidth="54.0" text="Likes" />
-            <TableColumn fx:id="sharesColumn" prefWidth="61.0" text="Shares" />
-            <TableColumn fx:id="datetimeColumn" prefWidth="117.0" text="Date/Time" />
+            <TableColumn fx:id="contentColumn" prefWidth="492.0" text="Content" />
+            <TableColumn fx:id="authorColumn" prefWidth="117.0" text="Author" />
+            <TableColumn fx:id="likesColumn" prefWidth="67.0" text="Likes" />
+            <TableColumn fx:id="sharesColumn" prefWidth="56.0" text="Shares" />
+            <TableColumn fx:id="datetimeColumn" prefWidth="116.0" text="Date/Time" />
          </columns>
       </TableView>
+      <Label layoutX="-84.0" layoutY="5.0" text="All Posts" translateX="10.0">
+         <font>
+            <Font name="Calibri Bold" size="35.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

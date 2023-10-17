@@ -11,85 +11,103 @@
 
 <AnchorPane prefHeight="464.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPostController">
    <children>
-      <Label alignment="CENTER" layoutX="53.0" prefHeight="60.0" prefWidth="251.0" text="Add Post">
+      <Label alignment="CENTER" layoutX="2.0" layoutY="6.0" prefHeight="38.0" prefWidth="149.0" text="Add Post">
          <font>
-            <Font name="Calibri Bold" size="30.0" />
+            <Font name="Calibri Bold" size="35.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="73.0" prefHeight="30.0" prefWidth="100.0" text="Post ID:">
+      <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="73.0" prefHeight="30.0" prefWidth="100.0" text="Post ID:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="106.0" prefHeight="30.0" prefWidth="100.0" text="Content:">
+      <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="110.0" prefHeight="30.0" prefWidth="100.0" text="Content:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="239.0" prefHeight="30.0" prefWidth="100.0" text="Author:">
+      <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="239.0" prefHeight="30.0" prefWidth="100.0" text="Author:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="271.0" prefHeight="30.0" prefWidth="100.0" text="Likes:">
+      <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="271.0" prefHeight="30.0" prefWidth="100.0" text="Likes:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="305.0" prefHeight="30.0" prefWidth="100.0" text="Shares:">
+      <Label alignment="CENTER_RIGHT" layoutX="38.0" layoutY="305.0" prefHeight="30.0" prefWidth="100.0" text="Shares:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="42.0" layoutY="338.0" prefHeight="30.0" prefWidth="100.0" text="Date/Time:">
+      <Label alignment="CENTER_RIGHT" layoutX="39.0" layoutY="338.0" prefHeight="30.0" prefWidth="100.0" text="Date/Time:">
          <font>
-            <Font size="17.0" />
+            <Font name="Calibri Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="postidField" layoutX="147.0" layoutY="76.0" promptText="Number etc. 1234" />
-      <TextArea fx:id="contentField" layoutX="147.0" layoutY="115.0" prefHeight="114.0" prefWidth="149.0" promptText="Text etc. Today was a good day!" wrapText="true" />
-      <TextField fx:id="authorField" layoutX="147.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" promptText="Text etc. John Smith" />
-      <TextField fx:id="likesField" layoutX="147.0" layoutY="274.0" promptText="Number etc. 1234" />
-      <TextField fx:id="sharesField" layoutX="147.0" layoutY="308.0" promptText="Number etc. 1234" />
-      <TextField fx:id="datetimeField" layoutX="147.0" layoutY="341.0" promptText="DD/MM/YYYY HH:MM" />
-      <Label fx:id="postidOutput" layoutX="313.0" layoutY="80.0">
+      <TextField fx:id="postidField" layoutX="140.0" layoutY="78.0" prefHeight="22.0" prefWidth="162.0" promptText="Number etc. 1234">
          <font>
             <Font name="Calibri" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="contentOutput" layoutX="313.0" layoutY="163.0">
+         </font></TextField>
+      <TextArea fx:id="contentField" layoutX="140.0" layoutY="115.0" prefHeight="114.0" prefWidth="162.0" promptText="Text etc. Today was a good day!" wrapText="true">
          <font>
             <Font name="Calibri" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="authorOutput" layoutX="313.0" layoutY="246.0">
+         </font></TextArea>
+      <TextField fx:id="authorField" layoutX="140.0" layoutY="241.0" prefHeight="25.0" prefWidth="162.0" promptText="Text etc. John Smith">
          <font>
             <Font name="Calibri" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="likesOutput" layoutX="313.0" layoutY="278.0">
+         </font></TextField>
+      <TextField fx:id="likesField" layoutX="140.0" layoutY="276.0" prefHeight="22.0" prefWidth="162.0" promptText="Number etc. 1234">
          <font>
             <Font name="Calibri" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="sharesOutput" layoutX="313.0" layoutY="313.0">
+         </font></TextField>
+      <TextField fx:id="sharesField" layoutX="140.0" layoutY="310.0" prefHeight="22.0" prefWidth="162.0" promptText="Number etc. 1234">
          <font>
             <Font name="Calibri" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="datetimeOutput" layoutX="313.0" layoutY="346.0">
+         </font></TextField>
+      <TextField fx:id="datetimeField" layoutX="140.0" layoutY="343.0" prefHeight="22.0" prefWidth="162.0" promptText="DD/MM/YYYY HH:MM">
          <font>
             <Font name="Calibri" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="postaddedOutput" layoutX="179.0" layoutY="383.0" textFill="#14b54d">
+         </font></TextField>
+      <Label fx:id="postidOutput" layoutX="313.0" layoutY="79.0" textFill="#cc0000">
          <font>
             <Font name="Calibri" size="17.0" />
          </font>
       </Label>
-      <Button layoutX="57.0" layoutY="381.0" mnemonicParsing="false" onAction="#addPostHandler" style="-fx-background-color: white;" text="Add Post">
+      <Label fx:id="contentOutput" layoutX="313.0" layoutY="163.0" textFill="#cc0000">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="authorOutput" layoutX="313.0" layoutY="242.0" textFill="#cc0000">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="likesOutput" layoutX="313.0" layoutY="277.0" textFill="#cc0000">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="sharesOutput" layoutX="313.0" layoutY="311.0" textFill="#cc0000">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="datetimeOutput" layoutX="313.0" layoutY="343.0" textFill="#cc0000">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="postaddedOutput" alignment="CENTER" layoutX="168.0" layoutY="389.0" prefHeight="21.0" prefWidth="135.0" textFill="#14b54d">
+         <font>
+            <Font name="Calibri" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="56.0" layoutY="381.0" mnemonicParsing="false" onAction="#addPostHandler" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: white;" text="Add Post">
          <effect>
-            <DropShadow blurType="ONE_PASS_BOX" />
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" radius="4.5" width="10.0" />
          </effect></Button>
       <Line endX="180.0" layoutX="125.0" layoutY="72.0" startX="-70.0" />
       <Line endX="180.0" layoutX="125.0" layoutY="105.0" startX="-70.0" />
