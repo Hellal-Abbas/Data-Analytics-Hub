@@ -32,42 +32,31 @@ public class ViewPostsController implements Initializable {
 
 	@FXML
 	public void viewAllHandler(ActionEvent event) throws IOException {
-
 		PostsTableScene postsTableScene = new PostsTableScene();
 		borderpane.setCenter(postsTableScene.getScene());
-
 	}
 
 	@FXML
 	public void searchPostHandler(ActionEvent event) throws IOException {
-
 		SearchPostScene searchPostScene = new SearchPostScene();
 		borderpane.setCenter(searchPostScene.getScene());
-
 	}
 
 	@FXML
 	public void toplikedPostsHandler(ActionEvent event) throws IOException {
-
 		TopLikedPostsScene topLikedPostsScene = new TopLikedPostsScene();
 		borderpane.setCenter(topLikedPostsScene.getScene());
-
 	}
 
 	@FXML
 	public void deletePostHandler(ActionEvent event) throws IOException {
-
 		DeletePostScene deletePostScene = new DeletePostScene();
 		borderpane.setCenter(deletePostScene.getScene());
-
 	}
 
 	@FXML
 	public void exportPostHandler(ActionEvent event) throws IOException {
-
 		ExportPostScene exportPostScene = new ExportPostScene();
 		borderpane.setCenter(exportPostScene.getScene());
-
 	}
-
 }

@@ -16,22 +16,7 @@ public class SearchPostController {
 	private String username;
 
 	@FXML
-	private Label postidOutput;
-
-	@FXML
-	private Label contentOutput;
-
-	@FXML
-	private Label authorOutput;
-
-	@FXML
-	private Label likesOutput;
-
-	@FXML
-	private Label sharesOutput;
-
-	@FXML
-	private Label datetimeOutput;
+	private Label postidOutput, contentOutput, authorOutput, likesOutput, sharesOutput, datetimeOutput;
 
 	@FXML
 	private Label postidErrorOutput;

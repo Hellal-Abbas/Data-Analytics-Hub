@@ -24,26 +24,19 @@ public class AccountController implements Initializable {
 			borderpane.setCenter(accountDetailsScene.getScene());
 		} catch (IOException e) {
 			e.printStackTrace();
-
 		}
 
 	}
 
 	@FXML
 	public void AccountDetailsHandler(ActionEvent event) throws IOException {
-
 		AccountDetailsScene accountDetailsScene = new AccountDetailsScene();
 		borderpane.setCenter(accountDetailsScene.getScene());
-
 	}
 
 	@FXML
 	public void EditDetailsHandler(ActionEvent event) throws IOException {
-
 		EditDetailsScene editDetailsScene = new EditDetailsScene();
-
 		borderpane.setCenter(editDetailsScene.getScene());
-
 	}
-
 }

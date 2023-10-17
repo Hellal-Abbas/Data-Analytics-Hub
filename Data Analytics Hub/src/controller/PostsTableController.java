@@ -57,5 +57,4 @@ public class PostsTableController implements Initializable {
 
 		postsTable.setItems(ViewPostsQuery.ViewPosts(username));
 	}
-
 }

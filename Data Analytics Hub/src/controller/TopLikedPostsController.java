@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-import database.DataSingleton;
 import database.TopLikedPostsQuery;
 import helpers.DataExists;
 import javafx.collections.FXCollections;
@@ -23,22 +22,14 @@ import model.PostsTableModel;
 
 public class TopLikedPostsController implements Initializable {
 
-	private String username;
+	@FXML
+	private TextField nPostsDisplayField, filterByUsernameField;
 
 	@FXML
-	private TextField nPostsDisplayField;
-
-	@FXML
-	private TextField filterByUsernameField;
+	private Label numberOutput, userOutput;
 
 	@FXML
 	private TableView<AllUsersModel> userTable;
-
-	@FXML
-	private Label numberOutput;
-
-	@FXML
-	private Label userOutput;
 
 	@FXML
 	private TableColumn<AllUsersModel, String> users;
@@ -70,12 +61,8 @@ public class TopLikedPostsController implements Initializable {
 	ObservableList<PostsTableModel> Postslistview = FXCollections.observableArrayList();
 	ObservableList<AllUsersModel> Userslistview = FXCollections.observableArrayList();
 
-	DataSingleton dataSingleton = DataSingleton.getInstance();
-
 	@Override
 	public void initialize(URL url, ResourceBundle resource) {
-
-		username = dataSingleton.getUsername();
 
 		users.setCellValueFactory(new PropertyValueFactory<>("username"));
 
@@ -90,7 +77,6 @@ public class TopLikedPostsController implements Initializable {
 		usernameColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
 
 		postsTable.setItems(TopLikedPostsQuery.AllPosts(""));
-
 	}
 
 	@FXML

@@ -16,30 +16,14 @@ public class EditDetailsController {
 	private String username;
 
 	@FXML
-	private TextField firstnameField;
+	private TextField firstnameField, lastnameField, usernameField, passwordField;
 
 	@FXML
-	private TextField lastnameField;
-
-	@FXML
-	private TextField usernameField;
-
-	@FXML
-	private TextField passwordField;
-
-	@FXML
-	private Label firstnameOutput;
-
-	@FXML
-	private Label lastnameOutput;
-
-	@FXML
-	private Label usernameOutput;
-
-	@FXML
-	private Label passwordOutput;
+	private Label firstnameOutput, lastnameOutput, usernameOutput, passwordOutput;
 
 	DataSingleton dataSingleton = DataSingleton.getInstance();
+
+	DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
 
 	@FXML
 	public void updateDetailsHandler(ActionEvent event) throws IOException {
@@ -52,8 +36,6 @@ public class EditDetailsController {
 		String password = passwordField.getText();
 
 		String UsernameExists = DataExists.usernameExists(AccountUsername);
-
-		DataAnalyticsHubController dataAnalyticsHubController = new DataAnalyticsHubController();
 
 		if (Objects.equals(firstname, "") == true) {
 			firstnameOutput.setText("");
@@ -92,5 +74,4 @@ public class EditDetailsController {
 			passwordOutput.setText("Updated!");
 		}
 	}
-
 }

@@ -22,11 +22,7 @@ public class DataAnalyticsHubController implements Initializable {
 	@FXML
 	private BorderPane borderpane;
 
-	private String firstname;
-
-	private String lastname;
-
-	private String username;
+	private String firstname, lastname, username;
 
 	DataSingleton dataSingleton = DataSingleton.getInstance();
 

@@ -42,7 +42,6 @@ public class ExportPostController {
 
 		if (Objects.equals(postID, "") == true) {
 			exportOutput.setText("");
-
 		} else if (Objects.equals(postID, postidExists) == false) {
 			exportOutput.setText("Post ID not in record!");
 		} else if (Objects.equals(postID, postidExists) == true) {
@@ -55,9 +54,7 @@ public class ExportPostController {
 			if (file != null) {
 				SaveFile.saveTextToFile(post, file);
 			}
-
 			exportOutput.setText("Post Exported!");
 		}
-
 	}
 }

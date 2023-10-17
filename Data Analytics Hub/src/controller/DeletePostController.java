@@ -34,6 +34,5 @@ public class DeletePostController {
 			DeleteRow.removePost(postid);
 			deleteOutput.setText("Post Removed!");
 		}
-
 	}
 }
