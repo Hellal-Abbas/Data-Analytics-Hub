@@ -8,10 +8,12 @@ import javafx.scene.layout.BorderPane;
 
 public class DataAnalyticsHubScene {
 
+	// Returns the Title for the Data Analytics Hub Window
 	public String getTitle() {
 		return "Data Analytics Hub";
 	}
 
+	// Returns the Scene for the Data Analytics Hub GUI
 	public Scene getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Data_Analytics_Hub_GUI.fxml"));

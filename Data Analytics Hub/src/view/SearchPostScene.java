@@ -7,6 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class SearchPostScene {
 
+	// Returns the Scene for the Search Post GUI
 	public AnchorPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Search_Post_GUI.fxml"));

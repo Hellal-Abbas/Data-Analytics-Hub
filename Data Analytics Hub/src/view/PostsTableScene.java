@@ -7,6 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class PostsTableScene {
 
+	// Returns the Scene for the Posts Table GUI
 	public AnchorPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Posts_Table_GUI.fxml"));

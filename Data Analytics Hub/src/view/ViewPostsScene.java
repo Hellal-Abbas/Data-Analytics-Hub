@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 
 public class ViewPostsScene {
 
+	// Returns the Scene for the View Posts GUI
 	public BorderPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/View_Post_GUI.fxml"));

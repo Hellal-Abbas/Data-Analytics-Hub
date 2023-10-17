@@ -7,6 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class AddPostScene {
 
+	// Returns the Scene for the Add Post GUI
 	public AnchorPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Add_Post_GUI.fxml"));

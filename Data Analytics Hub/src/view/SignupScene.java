@@ -8,10 +8,12 @@ import javafx.scene.layout.GridPane;
 
 public class SignupScene {
 
+	// Returns the Title for the Sign Up Window
 	public String getTitle() {
 		return "Data Analytics Hub Signup";
 	}
 
+	// Returns the Scene for the Sign Up GUI
 	public Scene getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Signup_GUI.fxml"));

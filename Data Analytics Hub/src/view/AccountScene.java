@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 
 public class AccountScene {
 
+	// Returns the Scene for the Account GUI
 	public BorderPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Account_GUI.fxml"));

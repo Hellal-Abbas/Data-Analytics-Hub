@@ -7,6 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class DeletePostScene {
 
+	// Returns the Scene for the Delete Post GUI
 	public AnchorPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Delete_Post_GUI.fxml"));

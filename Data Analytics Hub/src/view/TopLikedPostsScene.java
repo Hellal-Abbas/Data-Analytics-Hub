@@ -7,6 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class TopLikedPostsScene {
 
+	// Returns the Scene for the Top Liked Posts GUI
 	public AnchorPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Top_Liked_Posts_GUI.fxml"));

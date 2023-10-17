@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 
 public class DashboardScene {
 
+	// Returns the Scene for the Dashboard GUI
 	public BorderPane getScene() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Dashboard_GUI.fxml"));
