@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
-import database.ViewPostsQuery;
 import helpers.DataExists;
 import helpers.SaveFile;
+import helpers.ViewPostsQuery;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

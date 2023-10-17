@@ -5,8 +5,8 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-import database.TopLikedPostsQuery;
 import helpers.DataExists;
+import helpers.TopLikedPostsQuery;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
