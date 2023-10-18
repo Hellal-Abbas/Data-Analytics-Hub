@@ -33,7 +33,7 @@ public class UpdateTable {
 		return result;
 	}
 
-	// Method to update the 'username' field in the 'SocialMediaPosts' table.
+	// Method to update a given column in the 'SocialMediaPosts' table.
 	public static int UpdatePostsUsername(String column, String newvalue, String username) {
 		// Defining the table name in the database.
 		final String TABLE_NAME = "SocialMediaPosts";

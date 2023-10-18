@@ -10,11 +10,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.PostsTableModel;
 
+//This class contains methods for querying and retrieving posts data from the database.
 public class ViewPostsQuery {
 	// Method to retrieve and return a list of posts for a specific user.
 	public static ObservableList<PostsTableModel> ViewPosts(String username) {
 		// Creating an empty ObservableList to store posts data.
 		ObservableList<PostsTableModel> listview = FXCollections.observableArrayList();
+		// Defining the table name in the database.
 		final String TABLE_NAME = "SocialMediaPosts";
 
 		try (Connection con = DatabaseConnection.getConnection(); Statement stmt = con.createStatement();) {
