@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderpane" prefHeight="615.0" prefWidth="1145.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DataAnalyticsHubController">
+<BorderPane fx:id="borderpane" prefHeight="615.0" prefWidth="1322.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DataAnalyticsHubController">
    <top>
       <GridPane prefHeight="55.0" prefWidth="1089.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0.5px 0px 0px 0px;" BorderPane.alignment="CENTER">
         <columnConstraints>

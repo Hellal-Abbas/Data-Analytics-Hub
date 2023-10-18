@@ -15,3 +15,24 @@ Step 5: Paste the line below into the 'VM arguments' field
 
 Step 6: Ensure that the check boxes are unticked
 Step 7: Apply and run.
+
+There are two accounts signed up to the Data Analytics Hub to trial and see current posts.
+The posts loaded into these two accounts are from the posts.csv from assignment 1.
+
+Account 1: (CASE SENSITIVE)
+username: account1
+password: account1
+
+Account 2: (CASE SENSITIVE)
+username account2
+password: account2
+
+IDE used: Github
+
+GITHUB LINK: https://github.com/Hellal-Abbas/Data-Analytics-Hub
+
+Java version: Java 17
+
+JavaFX version: 20.0.2
+
+Database: SQLite
